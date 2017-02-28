@@ -1,0 +1,669 @@
+jQuery(function() {
+// aria navigation 		
+    jQuery('.nav, .nav2, .nav-sec ').setup_navigation();
+// aria navigation  ends
+// mobile menu functioning
+    jQuery("a#trigger").on("click", function() {
+        jQuery("body").addClass("disabled");
+    });
+    jQuery("#page").on("click", function() {
+        jQuery("body").removeClass("disabled");
+    });
+// mobile menu functioning ends
+
+		
+
+// Font resizing initializer
+    jQuery("#textsizer a").textresizer({
+        target: "body",
+        type: "fontSize",
+        sizes: ["15px", "16px", "17px"],
+        selectedIndex: 1
+    });
+// Font resizing initializer ends	
+
+// skip content / back to top buttons
+    jQuery(window).scroll(function() {
+        if (jQuery(this).scrollTop() > 100) {
+            jQuery('.skip-content').fadeOut();
+            jQuery('.back-to-top').fadeIn();
+
+        } else {
+            jQuery('.skip-content').fadeIn();
+            jQuery('.back-to-top').fadeOut();
+
+        }
+    });
+
+	jQuery('.back-to-top').click(function() {
+        jQuery("html, body").animate({
+            scrollTop: 0
+        }, 600);
+        return false;
+    });
+// skip content / back to top buttons ends	
+	
+// how do I opne / close
+    jQuery('.arw').click(function() {
+        jQuery(this).toggleClass("close");
+        jQuery(".how-do-menu").toggle();
+        return false;
+    });
+// how do I opne / close ends
+
+// side bar subscription/quick links opne / close 
+    jQuery(".open-sidebar").on('click', function() {
+        jQuery(this).toggleClass("close-sidebar");
+        jQuery(this).parent().parent().toggleClass("collapsed");
+        return false;
+    });
+    jQuery(".quick-link ul li").on('click', function() {
+
+        if (jQuery(".quick-link").hasClass("collapsed")) {
+            jQuery(".open-sidebar").toggleClass("close-sidebar");
+            jQuery(".quick-link").removeClass("collapsed");
+        } else {
+            return false;
+        }
+
+    });
+    jQuery(".desktop.subscription-content").hide();
+    jQuery(".subscription-button").on('click', function() {
+        jQuery(".desktop.subscription-content").show();
+
+        return false;
+    });
+    jQuery(".subscription-content .open-sidebar").on('click', function() {
+        jQuery(".desktop.subscription-content").toggle();
+        return false;
+    });
+// side bar subscription/quick links opne / close ends
+
+});
+// side bar subscription opne / close
+jQuery(window).resize(function() {
+    if (screen.width < 767) {
+        jQuery(".desktop.subscription-content").show();
+    } else {
+        jQuery(".desktop.subscription-content").hide();
+    }
+});
+jQuery(window).load(function() {
+    if (screen.width < 767) {
+        jQuery(".desktop.subscription-content").show();
+    }
+});
+jQuery(document).ready(function() {
+    if (screen.width < 767) {
+        jQuery(".desktop.subscription-content").show();
+    }
+});
+// side bar subscription opne / close ends
+
+// sticky nav functioning for home / inside pages
+$('header').css('position', 'relative').css('z-index', '9');
+$(window).scroll(function() {
+    if ($(this).scrollTop() > 1) {
+        $('header').addClass("sticky");
+        $('header').css('position', 'fixed');
+		$('body').css('margin-top', 133);
+    } else {
+        $('header').removeClass("sticky");
+        $('header').css('position', 'relative').css('z-index', '19');
+		$('body').css('margin-top', 0);
+    }
+});
+$(window).scroll(function() {
+	if ($(this).scrollTop() > 100) {					  
+					$('.slider-content').fadeOut();	
+	}else if ($(this).scrollTop() < 100 ) 	{
+		$('.slider-content').fadeIn();	
+	}
+						  
+}); 
+						  
+$('.inside #nav-2').css('position', 'relative').css('z-index', '9');
+$(window).scroll(function() {
+	var h_top = $("#banner").height();
+	var l_pad = 133;
+	var new_top = h_top ;
+	
+    if ($(this).scrollTop() > new_top && screen.width > 767) {
+        $('#nav-2').addClass('sticky');
+    } else if ($(this).scrollTop() > 0 && screen.width > 767) {
+        $('#nav-2').removeClass('sticky');
+    }
+    if ($(this).scrollTop() > 1 && screen.width > 767) {
+        $('.inside #nav-2').removeClass('sticky');
+        $('.inside #nav-2').addClass('stickyy');
+        $('.inside #nav-2').css('position', 'fixed');
+		$('.inside body').css('margin-top', l_pad);
+		
+    } else if ($(this).scrollTop() <= 0 && screen.width > 767) {
+        $('.inside #nav-2').removeClass('stickyy');
+		$('.inside #nav-2').removeClass('sticky');
+        $('.inside #nav-2').css('position', 'relative').css('z-index', '9');
+		$('.inside body').css('margin-top', 0);
+
+    }
+
+});
+$(window).resize(function() {
+    if ($(this).scrollTop() <= 0 && screen.width > 767) {
+        $('.inside #nav-2').removeClass('stickyy');
+    }
+});
+// sticky nav functioning for home / inside pages ends
+
+// accrodions for inside pages and side bar
+$(".accordion, .content-accordion, .color-code-accordion").accordion({
+    header: "h4",
+    heightStyle: "content",
+	collapsible: true,
+	active: false
+});
+// accrodions for inside pages and side bar ends
+// accrodions for member dashboard page
+$(".meeting-accordion, .estimator-accordion").accordion({
+    header: "h4",
+    heightStyle: "content",
+    collapsible: true,
+    active: false,
+    alwaysOpen: false
+	
+});
+$(".estimator-accordion").accordion({
+	
+ beforeActivate: function(event, ui) {
+             // The accordion believes a panel is being opened
+            if (ui.newHeader[0]) {
+                var currHeader  = ui.newHeader;
+                var currContent = currHeader.next('.ui-accordion-content');
+             // The accordion believes a panel is being closed
+            } else {
+                var currHeader  = ui.oldHeader;
+                var currContent = currHeader.next('.ui-accordion-content');
+            }
+             // Since we've changed the default behavior, this detects the actual status
+            var isPanelSelected = currHeader.attr('aria-selected') == 'true';
+            
+             // Toggle the panel's header
+            currHeader.toggleClass('ui-corner-all',isPanelSelected).toggleClass('accordion-header-active ui-state-active ui-corner-top',!isPanelSelected).attr('aria-selected',((!isPanelSelected).toString()));
+            
+            // Toggle the panel's icon
+            currHeader.children('.ui-icon').toggleClass('ui-icon-triangle-1-e',isPanelSelected).toggleClass('ui-icon-triangle-1-s',!isPanelSelected);
+            
+             // Toggle the panel's content
+            currContent.toggleClass('accordion-content-active',!isPanelSelected)    
+            if (isPanelSelected) { currContent.slideUp(); }  else { currContent.slideDown(); }
+
+            return false; // Cancels the default action
+        }
+	
+	
+	});
+
+// accrodions for member dashboard page ends
+$("#date").datepicker();
+
+// scenraios / FAQ pop ups
+$(function() {
+    if (screen.width > 768) {
+		$(".scenario-mobile, .faq-mobile").removeClass("hidden-mob");
+		$(".scenario-mobile, .faq-mobile").removeClass("visible-mob");
+		$(".scenario-wrap, .faq-wrap").addClass("hidden");
+	}	
+	return false;
+});	
+jQuery(window).load(function() {
+    if (screen.width > 768) {
+		$(".scenario-mobile, .faq-mobile").removeClass("hidden-mob");
+		$(".scenario-mobile, .faq-mobile").removeClass("visible-mob");
+		$(".scenario-wrap, .faq-wrap").addClass("hidden");
+	}	
+	return false;
+});	
+jQuery(window).resize(function() {
+    if (screen.width > 768) {
+		$(".scenario-mobile, .faq-mobile").removeClass("hidden-mob");
+		$(".scenario-mobile, .faq-mobile").removeClass("visible-mob");
+		$(".scenario-wrap, .faq-wrap").addClass("hidden");
+	}	
+	return false;
+});	
+
+$(function() {
+    if (screen.width < 767) {
+		$(".scenario-wrap, .faq-wrap").removeClass("hidden");
+		$(".scenario-wrap, .faq-wrap").removeClass("visible");
+		$(".scenario-mobile, .faq-mobile").addClass("hidden-mob");
+	}	
+	return false;
+});	
+jQuery(window).load(function() {
+    if (screen.width < 767) {
+		$(".scenario-wrap, .faq-wrap").removeClass("hidden");
+		$(".scenario-wrap, .faq-wrap").removeClass("visible");
+		$(".scenario-mobile, .faq-mobile").addClass("hidden-mob");
+	}	
+	return false;
+});	
+jQuery(window).resize(function() {
+    if (screen.width < 767) {
+		$(".scenario-wrap, .faq-wrap").removeClass("hidden");
+		$(".scenario-wrap, .faq-wrap").removeClass("visible");
+		$(".scenario-mobile, .faq-mobile").addClass("hidden-mob");
+	}	
+	return false;
+});	
+
+
+$('.scenraios a, .faq-list a').on('click',function(e) {
+var n = $(this).attr("name");
+
+if($("#" + n).hasClass("hidden-mob")){
+	$("#" + n).removeClass("hidden-mob");
+	$("#" + n).siblings(".visible-mob").removeClass("visible-mob");
+	$("#" + n).siblings(".scenario-mobile, .faq-mobile").addClass("hidden-mob");
+	$("#" + n).addClass("visible-mob");
+}
+	e.preventDefault();
+	return false;
+});
+
+	 
+$('.scenraios a, .faq-list a').on('click',function(e) {
+var a = $(this).attr("href");
+
+if($("#" + a).hasClass("hidden")){
+	$("#" + a).removeClass("hidden");
+	$("#" + a).siblings(".visible").removeClass("visible");
+	$("#" + a).siblings(".scenario-wrap, .faq-wrap").addClass("hidden");
+	$("#" + a).addClass("visible");
+}
+	e.preventDefault();
+	return false;
+});	
+
+$('.scenario-wrap .close-bt, .faq-wrap .close-bt').on('click',function(e) {
+	$(this).parent().parent().removeClass("visible");	
+	$(this).parent().parent().addClass("hidden");
+	e.preventDefault();
+});	
+$('.scenario-mobile .close-bt, .faq-mobile .close-bt').on('click',function(e) {
+	$(this).parent().parent().removeClass("visible-mob");	
+	$(this).parent().parent().addClass("hidden-mob");
+	e.preventDefault();
+});
+
+// scenraios / FAQ pop ups ends
+
+
+// equal heigt container creates
+
+equalheight = function(container) {
+
+    var currentTallest = 0,
+        currentRowStart = 0,
+        rowDivs = new Array(),
+        $el,
+        topPosition = 0;
+    jQuery(container).each(function() {
+
+        $el = jQuery(this);
+        jQuery($el).height('auto')
+        topPostion = $el.position().top;
+
+        if (currentRowStart != topPostion) {
+            for (currentDiv = 0; currentDiv < rowDivs.length; currentDiv++) {
+                rowDivs[currentDiv].height(currentTallest);
+            }
+            rowDivs.length = 0; // empty the array
+            currentRowStart = topPostion;
+            currentTallest = $el.height();
+            rowDivs.push($el);
+        } else {
+            rowDivs.push($el);
+            currentTallest = (currentTallest < $el.height()) ? ($el.height()) : (currentTallest);
+        }
+        for (currentDiv = 0; currentDiv < rowDivs.length; currentDiv++) {
+            rowDivs[currentDiv].height(currentTallest);
+        }
+    });
+}
+
+jQuery(function() {
+    if (screen.width < 1024) {
+        jQuery(".content-area-inside, .sidebar-right").removeClass("eq-height");
+        jQuery(".content-area-inside, .sidebar-right").css('height', 'auto');
+        equalheight('#immigration-cost .content-box > div');
+    } else if (screen.width > 1024) {
+        equalheight('.content-area-wrap > .eq-height');
+        equalheight('#immigration-cost .content-box > div');
+        return false;
+    }
+
+});
+
+jQuery(window).load(function() {
+    if (screen.width < 1024) {
+        jQuery(".content-area-inside, .sidebar-right").removeClass("eq-height");
+        jQuery(".content-area-inside, .sidebar-right").css('height', 'auto');
+        equalheight('#immigration-cost .content-box > div');
+    } else if (screen.width > 1024) {
+        equalheight('.content-area-wrap > .eq-height');
+        equalheight('#immigration-cost .content-box > div');
+
+        return false;
+    }
+
+
+});
+
+jQuery(window).resize(function() {
+    if (screen.width < 1024) {
+        jQuery(".content-area-inside, .sidebar-right").removeClass("eq-height");
+        jQuery(".content-area-inside, .sidebar-right").css('height', 'auto');
+        equalheight('#immigration-cost .content-box > div');
+    } else if (screen.width > 1024) {
+        equalheight('.content-area-wrap > .eq-height');
+        equalheight('#immigration-cost .content-box > div');
+    }
+
+
+
+});
+jQuery(function() {
+jQuery('#go').on('click',function() {
+    if (screen.width > 767) {
+		jQuery(".color-code-posts .color-info").removeClass("color-code-accordion");
+        jQuery(".color-code-posts .color-info").removeClass("ui-accordion");
+        jQuery(".color-code-posts .color-info").removeClass("ui-widget");
+        jQuery(".color-code-posts .color-info").removeClass("ui-helper-reset");
+        jQuery(".color-code-posts .color-info div").removeClass("ui-accordion-content");
+        jQuery(".color-code-posts .color-info div").removeClass("ui-helper-reset");
+        jQuery(".color-code-posts .color-info div").removeClass("ui-widget-content");
+        jQuery(".color-code-posts .color-info div").removeClass("ui-accordion-content-active");
+		equalheight('.color-info div .color-box.green');
+        equalheight('.color-info div .color-box.amber');
+        equalheight('.color-info div .color-box.red');
+        equalheight('.color-info div .color-box.blue');
+        equalheight('.color-info');
+
+
+    } else {
+        jQuery(".color-code-posts .color-info").addClass("color-code-accordion");
+        jQuery(".color-code-posts .color-info").addClass("ui-accordion");
+        jQuery(".color-code-posts .color-info").addClass("ui-widget");
+        jQuery(".color-code-posts .color-info").addClass("ui-helper-reset");
+        jQuery(".color-code-posts .color-info div").addClass("ui-accordion-content");
+        jQuery(".color-code-posts .color-info div").addClass("ui-helper-reset");
+        jQuery(".color-code-posts .color-info div").addClass("ui-widget-content");
+        jQuery(".color-code-posts .color-info div").addClass("ui-accordion-content-active");
+        jQuery(".color-info").css('height', 'auto');
+
+    }
+});	
+});	
+jQuery(function() {
+
+    if (screen.width > 767) {
+
+        equalheight('.color-info');
+        equalheight('.color-info div .color-box.green');
+        equalheight('.color-info div .color-box.amber');
+        equalheight('.color-info div .color-box.red');
+        equalheight('.color-info div .color-box.blue');
+        jQuery(".color-code-posts .color-info").removeClass("color-code-accordion");
+        jQuery(".color-code-posts .color-info").removeClass("ui-accordion");
+        jQuery(".color-code-posts .color-info").removeClass("ui-widget");
+        jQuery(".color-code-posts .color-info").removeClass("ui-helper-reset");
+        jQuery(".color-code-posts .color-info div").removeClass("ui-accordion-content");
+        jQuery(".color-code-posts .color-info div").removeClass("ui-helper-reset");
+        jQuery(".color-code-posts .color-info div").removeClass("ui-widget-content");
+        jQuery(".color-code-posts .color-info div").removeClass("ui-accordion-content-active");
+    } else {
+        jQuery(".color-code-posts .color-info").addClass("color-code-accordion");
+        jQuery(".color-code-posts .color-info").addClass("ui-accordion");
+        jQuery(".color-code-posts .color-info").addClass("ui-widget");
+        jQuery(".color-code-posts .color-info").addClass("ui-helper-reset");
+        jQuery(".color-code-posts .color-info div").addClass("ui-accordion-content");
+        jQuery(".color-code-posts .color-info div").addClass("ui-helper-reset");
+        jQuery(".color-code-posts .color-info div").addClass("ui-widget-content");
+        jQuery(".color-code-posts .color-info div").addClass("ui-accordion-content-active");
+        jQuery(".color-info").css('height', 'auto');
+
+    }
+});
+jQuery(window).load(function() {
+    if (screen.width > 767) {
+        equalheight('.color-info');
+        equalheight('.color-info div .color-box.green');
+        equalheight('.color-info div .color-box.amber');
+        equalheight('.color-info div .color-box.red');
+        equalheight('.color-info div .color-box.blue');
+        jQuery(".color-code-posts .color-info").removeClass("color-code-accordion");
+        jQuery(".color-code-posts .color-info").removeClass("ui-accordion");
+        jQuery(".color-code-posts .color-info").removeClass("ui-widget");
+        jQuery(".color-code-posts .color-info").removeClass("ui-helper-reset");
+        jQuery(".color-code-posts .color-info div").removeClass("ui-accordion-content");
+        jQuery(".color-code-posts .color-info div").removeClass("ui-helper-reset");
+        jQuery(".color-code-posts .color-info div").removeClass("ui-widget-content");
+        jQuery(".color-code-posts .color-info div").removeClass("ui-accordion-content-active");
+    } else {
+        jQuery(".color-code-posts .color-info").addClass("color-code-accordion");
+        jQuery(".color-code-posts .color-info").addClass("ui-accordion");
+        jQuery(".color-code-posts .color-info").addClass("ui-widget");
+        jQuery(".color-code-posts .color-info").addClass("ui-helper-reset");
+        jQuery(".color-code-posts .color-info div").addClass("ui-accordion-content");
+        jQuery(".color-code-posts .color-info div").addClass("ui-helper-reset");
+        jQuery(".color-code-posts .color-info div").addClass("ui-widget-content");
+        jQuery(".color-code-posts .color-info div").addClass("ui-accordion-content-active");
+        jQuery(".color-info").css('height', 'auto');
+
+    }
+});
+jQuery(window).resize(function() {
+    if (screen.width > 767) {
+        equalheight('.color-info');
+        equalheight('.color-info div .color-box.green');
+        equalheight('.color-info div .color-box.amber');
+        equalheight('.color-info div .color-box.red');
+        equalheight('.color-info div .color-box.blue');
+        jQuery(".color-code-posts .color-info").removeClass("color-code-accordion");
+        jQuery(".color-code-posts .color-info").removeClass("ui-accordion");
+        jQuery(".color-code-posts .color-info").removeClass("ui-widget");
+        jQuery(".color-code-posts .color-info").removeClass("ui-helper-reset");
+        jQuery(".color-code-posts .color-info div").removeClass("ui-accordion-content");
+        jQuery(".color-code-posts .color-info div").removeClass("ui-helper-reset");
+        jQuery(".color-code-posts .color-info div").removeClass("ui-widget-content");
+        jQuery(".color-code-posts .color-info div").removeClass("ui-accordion-content-active");
+    } else {
+        jQuery(".color-code-posts .color-info").addClass("color-code-accordion");
+        jQuery(".color-code-posts .color-info").addClass("ui-accordion");
+        jQuery(".color-code-posts .color-info").addClass("ui-widget");
+        jQuery(".color-code-posts .color-info").addClass("ui-helper-reset");
+        jQuery(".color-code-posts .color-info div").addClass("ui-accordion-content");
+        jQuery(".color-code-posts .color-info div").addClass("ui-helper-reset");
+        jQuery(".color-code-posts .color-info div").addClass("ui-widget-content");
+        jQuery(".color-code-posts .color-info div").addClass("ui-accordion-content-active");
+        jQuery(".color-info").css('height', 'auto');
+
+    }
+});
+
+// equal heigt container ends
+
+// Source Country Profile Implementation (Starts here)
+// map plugin initializer 
+jQuery(function() {
+	jQuery('#vmap').vectorMap({
+      map: 'world_en',
+      backgroundColor: '#ffffff',
+      color: '#d1d1d1',
+      hoverColor: '#58595b',
+      hoverColors: {},
+      selectedColor: '#58595b',
+      scaleColors: ['#b6d6ff', '#005ace'],
+      normalizeFunction: 'linear',
+      enableZoom: false,
+      showTooltip: true,
+      borderColor: '#ffffff',
+      borderWidth: 1,
+      borderOpacity: 0.25,
+      selectedRegions: null,
+      multiSelectRegion: false,
+	  onRegionClick: function(event, code, region) {
+		showdata(code);
+		
+		equalheight('.color-info div .color-box.green');
+        equalheight('.color-info div .color-box.amber');
+        equalheight('.color-info div .color-box.red');
+        equalheight('.color-info div .color-box.blue');
+		equalheight('.color-info');
+		
+		
+		jQuery("html,body").animate({
+			scrollTop: 450
+		}, 600);
+		event.preventDefault();
+	  },
+      onRegionOver: function (event, code, region) {
+		if (activeNations.indexOf(code) === -1 ) 
+			event.preventDefault();
+		else
+			return true;
+      },
+	  onRegionOut: function(e, code) {
+            document.body.style.cursor = 'default';
+      },
+	  onLabelShow: function(event, label, code) {
+		if (activeNations.indexOf(code) === -1) {
+            label.text('');
+            event.preventDefault();
+        }
+	  },
+	});
+	//jQuery('#tab-container').easytabs();
+});	
+
+// Show Country data
+var oldcode = null;
+function showdata( code ){
+	jQuery(".country_data").addClass("hide_content");
+	jQuery("#"+code).removeClass( "hide_content" );
+	
+	if( oldcode != null )
+		jQuery("#vmap").vectorMap("deselect", oldcode);
+	
+	jQuery("#vmap").vectorMap("select", code);
+	oldcode = code;
+}
+
+// Select country from dropdown and go
+function go_country( ){ 
+	
+	showdata( jQuery("#source_countries").val() ); 
+		jQuery(".color-code-posts .color-info").removeClass("color-code-accordion");
+        jQuery(".color-code-posts .color-info").removeClass("ui-accordion");
+        jQuery(".color-code-posts .color-info").removeClass("ui-widget");
+        jQuery(".color-code-posts .color-info").removeClass("ui-helper-reset");
+        jQuery(".color-code-posts .color-info div").removeClass("ui-accordion-content");
+        jQuery(".color-code-posts .color-info div").removeClass("ui-helper-reset");
+        jQuery(".color-code-posts .color-info div").removeClass("ui-widget-content");
+        jQuery(".color-code-posts .color-info div").removeClass("ui-accordion-content-active");
+		equalheight('.color-info div .color-box.green');
+        equalheight('.color-info div .color-box.amber');
+        equalheight('.color-info div .color-box.red');
+        equalheight('.color-info div .color-box.blue');
+        equalheight('.color-info');
+}
+
+// Scroll down to the content
+jQuery('input#go').click(function() {
+	jQuery("html,body").animate({
+		scrollTop: 600
+	}, 600);
+	return false;
+});
+
+// Source Country Profile Implementation (Ends here)
+// select drop down
+   $(function () {
+
+        var $win = $(window); // or $box parent container
+        var $box = $(".dropcontainer");
+        //  var $log = $(".log");
+
+        $win.on("click.Bst", function (event) {
+            if (
+                $box.has(event.target).length == 0 //checks if descendants of $box was clicked
+                    && !$box.is(event.target) && !$('.trigger').is(event.target)//checks if the $box itself was clicked
+                ) {
+                if ($(".dropcontainer ul").hasClass('dropdownvisible')) {
+                    $(".dropcontainer ul").removeClass('dropdownvisible');
+                    $(".dropcontainer ul").addClass('dropdownhidden');
+
+                }
+                if ($(".dropcontainer ul").hasClass('dropdownhidden')) {
+                    $(".dropcontainer ul").removeClass('dropdownhhidden');
+                    $(".dropcontainer ul").addClass('dropdownvisible');
+
+                }
+            }
+        });
+		
+
+
+    });
+   
+
+
+function test(i) {
+    switch (i) {
+        case 1:
+            if ($("#cat-dropdown ul").hasClass('dropdownhidden')) {
+                $("#cat-dropdown ul").removeClass('dropdownhidden');
+                $("#cat-dropdown ul").addClass('dropdownvisible');
+            } else if ($("#cat-dropdown ul").hasClass('dropdownvisible')) {
+                $("#cat-dropdown ul").removeClass('dropdownvisible');
+                $("#cat-dropdown ul").addClass('dropdownhidden');
+            }
+            break;
+        case 2:
+            if ($("#arc-dropdown ul").hasClass('dropdownhidden')) {
+                $("#arc-dropdown ul").removeClass('dropdownhidden');
+                $("#arc-dropdown ul").addClass('dropdownvisible');
+            } else if ($("#arc-dropdown ul").hasClass('dropdownvisible')) {
+                $("#arc-dropdown ul").removeClass('dropdownvisible');
+                $("#arc-dropdown ul").addClass('dropdownhidden');
+            }
+
+            break;
+
+
+    }
+
+}
+// select drop down ends
+// custom radio / checkbox fields only for cost estimator
+jQuery(function(){
+				
+			
+jQuery('.estimator-accordion input:radio.custom_radio').screwDefaultButtons({
+    image: 'url("'+jQuery("#template_url").val()+'/images/icons/radio-bg-r.png")',
+    width: 19,
+    height: 19
+   });
+	
+jQuery('input:checkbox.custom_checkbox').screwDefaultButtons({
+				image: 'url("'+jQuery("#template_url").val()+'/images/icons/checkbox-bg-r.png")',
+				width: 20,
+				height: 20
+});	
+
+
+
+
+});
+// custom radio / checkbox fields only for cost estimator ends

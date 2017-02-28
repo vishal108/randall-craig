@@ -1,0 +1,91 @@
+@charset "utf-8";
+/* ------------------------------------
+	Pagination
+-------------------------------------*/	
+.editor-content .wp-pagenavi {position:absolute; right:0; top:18px; width:auto;}
+span.pages,
+.qtip .qtip-tip canvas,
+.fc-today-button,
+.fc-prevYear-button,
+.fc-nextYear-button,
+.fc-toolbar .fc-right
+{display:none;}
+.wp-pagenavi {float:right; margin-top:40px; clear:none;}
+.wp-pagenavi a, .wp-pagenavi span,
+.editor-content .wp-pagenavi a,
+.editor-content .wp-pagenavi span {border:0; color:#231f20; font-family: 'Gotham HTF Book'; font-size:1em; padding:3px 5px; margin:2px; line-height:normal;}
+.wp-pagenavi span.current {color:#4774aa; text-decoration:underline; font-weight:normal;}
+h3 a {color:#231f20;}
+h3 a:hover {text-decoration:underline;}
+.editor-content iframe {width:100%; max-width:560px;}
+/*td iframe {height:auto;}*/
+
+/* ------------------------------------
+	Event Calendar - Customize Design
+-------------------------------------*/	
+
+.fc table {margin:0;}
+#event-list-view thead { background-color:#8e0b56
+}
+table.dataTable {border-collapse:collapse;}
+table.dataTable thead th, table.dataTable thead td,
+table.dataTable tbody th, table.dataTable tbody td {color:#fff; font-weight:normal; padding:18px 15px; line-height:normal; text-align:left; border-bottom:0;}
+/*table.dataTable thead th:first-child, table.dataTable thead td:first-child {text-align:left;}*/
+table.dataTable tbody th,
+table.dataTable tbody td {color:#4a4a4a; font-size:.875em;}
+table.dataTable.stripe tbody tr.odd,
+table.dataTable.display tbody tr.odd {background:#fff;}
+table.dataTable.stripe tbody tr.even,
+table.dataTable.display tbody tr.even {background:#eeeeee;}
+table.dataTable,
+#event-list-view td,
+#event-list-view table {border:1px solid #e0e0e0;}
+#event-list-view td,
+#event-list-view th {border-top:0; border-bottom:0;}
+table.dataTable tbody td a{ text-decoration:none; color:#4a4a4a;}
+.event_date {white-space:nowrap;}
+.venue {max-width:120px;}
+.event_name {min-width:160px;}
+.dataTables_wrapper .dataTables_paginate {
+    float: right;
+    padding-top: 0.25em;
+    text-align: right;
+	margin-bottom:10px
+}
+.dataTables_wrapper .dataTables_paginate .paginate_button,
+.dataTables_wrapper .dataTables_paginate .paginate_button.disabled,
+.dataTables_wrapper .dataTables_paginate .paginate_button.disabled:hover,
+.dataTables_wrapper .dataTables_paginate .paginate_button.disabled:active {font-size:.78em;  color:#58595b !important; padding:0 6px !important; border-radius:0; border:0; border-right:0px solid #000; line-height:15px; margin:0; box-shadow:none !important;}
+.dataTables_wrapper .dataTables_paginate .paginate_button.current,
+.dataTables_wrapper .dataTables_paginate .paginate_button:hover,
+.dataTables_wrapper .dataTables_paginate .paginate_button.current:hover {color:#455cc7 !important; box-shadow:none !important; padding:0 6px !important; margin:0 !important; background:none; border:0; border-right:0px solid #000;}
+/*#cal-list-view_next {padding-right:0; border:0;}*/
+.editor-content ul.list-filter li {background:#fff;  max-width:188px; padding:0px; margin-bottom:20px; }
+.ui-widget .list-filter select, .ui-widget select{ width:100%; background:none; color:#4a4a4a;}
+.select-wrap select option{ color:#000;}
+.year-select-wrap{ float:right; width:auto;}
+.year-select-wrap .select-wrap{width:145px; margin-bottom:0; margin-right:5px;}
+.year-select-wrap .select-wrap select{color:#6a6b6d; margin-right:5px; height:36px;}
+.year-select-wrap .year-count{ width:100px; color:#6a6b6d; border:1px solid #c6c6c6; padding:6px;  -webkit-appearance: none; -moz-appearance: textfield;
+  margin: 0;  }
+.ui-widget .gotoCalDate-btn, .gotoCalDate-btn {background:#9dbb47; padding:3px 8px;color:#fff; font-size:.65em;}
+.select-group .gotoCalDate-btn {float:left; margin-right:20px; border-radius:10px; padding:5px 15px 4px; font-size:inherit;}
+.year-select-wrap input[type=number].year-count::-webkit-inner-spin-button, 
+.year-select-wrap input[type=number].year-count::-webkit-outer-spin-button { 
+  -webkit-appearance: none; 
+  margin: 0; 
+}
+.year-select-wrap .select-wrap, .year-select-wrap .year-count,.gotoCalDate-btn{ display:inline-block; vertical-align:middle;} 
+.qtip-default {background:#73ca41; box-shadow:0 0 4px #b9b9b9; border:0; padding:30px 15px;}
+.qtip-content {color:#fff; font-weight:normal; padding:0; font-size:.94em;}
+.qtip-content hr {margin:5px 0 12px; background:#d4efc4; height:1px; border:0;}
+.qtip-tip {background: url(images/icon/arrow-grn-left.png) no-repeat !important; width:18px !important; height:25px !important; left:-18px !important; top:48% !important;}
+.qtip-pos-rb .qtip-tip, .qtip-pos-rc .qtip-tip {background: url(images/icon/arrow-grn-right.png) no-repeat !important; width:18px !important; height:25px !important; right:-18px !important; left:auto !important; top:48% !important;}
+
+/* Added on 30 Sep 2016 */
+ol.list-style-none {padding-left:0; margin:10px 0 20px;}
+ol.list-style-none li {list-style:none; margin-left:0;}
+.list-style-none label {width:100%; font-size:inherit; display:block;}
+.list-style-none label.error {font-size:initial; padding:10px 0;}
+#ans {margin-top:40px; padding-top:40px; border-top:8px solid #9dbb47;}
+table.IRGlossary td:first-letter {text-transform:uppercase;}
