@@ -1,6 +1,6 @@
 jQuery(function() {
 // aria navigation
-    jQuery('.nav, .nav2, .nav-sec ').setup_navigation();
+    jQuery('.nav, .nav2, .nav-top, .nav-sec ').setup_navigation();
 // aria navigation  ends
 //// Font resizing initializer
             jQuery("#textsizer li a").textresizer({
