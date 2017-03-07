@@ -28,7 +28,9 @@
     position: absolute;
     text-indent: -99999px !important;
     width: 24px;}.flex-play {    background: url(../images/icons/play.png) no-repeat;    width: 24px;    height: 24px;    text-indent: -99999px !important;    float: left}.flex-pause {    background: url(../images/icons/pause.png) no-repeat;    width: 24px;    height: 24px;    text-indent: -99999px !important;    float: left;}@media screen and (min-width: 768px) and (max-width: 1024px) {    .flex-pauseplay {        position: absolute;      text-indent: -99999px !important;        width: 24px;        height: 24px;        cursor: pointer;    }    }
-@media screen and (min-width: 320px) and (max-width: 767px) { .flex-pauseplay {     bottom: 33%;left: 6%; }	
+@media screen and (min-width: 320px) and (max-width: 767px) { 
+	
+	.flex-pauseplay { bottom: 33%;left: 6%; }	
 .flex-control-nav { display:none}
 .flex-control-paging li a { background: rgba(255, 255, 255, 0.6);}
 .flex-control-paging li a:hover {    background: rgba(255, 255, 255, 0.8); }

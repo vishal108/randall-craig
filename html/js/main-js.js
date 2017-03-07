@@ -9,9 +9,7 @@ jQuery(function() {
             });
 //
 //// Font resizing initializer ends
-	
 
-	
 //banner slider
 jQuery('.flexslider').flexslider({
 	controlNav: true,
@@ -288,6 +286,14 @@ jQuery('#vmap').vectorMap({
 });
 }
 // MAP ends
+//	custom checkbox/radio button
+jQuery('.custom-check').screwDefaultButtons({
+    image: 'url("images/icons/checkbox-bg2.jpg")',
+    width: 20,
+    height: 20
+   });
+//custom checkbox/radio button ends	
+	
 });
 // window width specific
 jQuery(function() {

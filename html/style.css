@@ -294,7 +294,7 @@ html .lang-fr .lang-nav li.top-left-nav-en{padding: 2px 14px 8px 13px; }
 	margin-right:-5%;
 	width: 209%;
 	 }
-.speaking .banner-wrap img, .thought-leadership .banner-wrap img{
+.speaking .banner-wrap img, .thought-leadership .banner-wrap img, .media .banner-content img{
 margin-left: -25px;
 /*    max-width: 937px;*/
     vertical-align: bottom;
@@ -342,7 +342,7 @@ margin-left: -25px;
 .banner-content h1{ font-size: 1.1875em;line-height: 1.22;
   color: #ffffff; font-weight: 700;}
 .banner-content p{color: #ffffff; display: none;}
-.speaking .banner-content{ background-color: rgba(79, 176, 68, 0.95);
+.speaking .banner-content, .media .banner-content{ background-color: rgba(79, 176, 68, 0.95);
 height: 269px;
     left: -54px;
     top: -156px;
@@ -650,6 +650,9 @@ color: #ffffff;
     font-weight: 700;
     text-align: center;
     vertical-align: middle;
+}
+.choose-speaker-content ul li:last-child p a{
+	color: #ffffff;
 }
 .ask-question-bt{ background-color: #4fb144;
     background-image: url("images/icons/navy-arrow.png");
@@ -3539,7 +3542,9 @@ height: 75%;
 .thought-leadership.two-column.weekly #randall-form.side-bar .content-box .form-right{
 	display: none;
 }
-#randall-form .content-box .form-left h2, .thought-leadership.two-column.weekly #randall-form .content-box .form-left h2,
+#randall-form .content-box .form-left h2, 
+.thought-leadership.two-column.weekly #randall-form .content-box .form-left h2,
+.thought-leadership.two-column.books #randall-form .content-box .form-left h2,
 	 .thought-leadership.full-width.white-papers #randall-form .content-box .form-left h2{
  background-color: #4fb144;
     border-radius: 300px;
@@ -3557,7 +3562,8 @@ height: 75%;
 		
 }
 .speaking #randall-form .content-box .form-left h2,
-.thought-leadership.two-column.weekly #randall-form.side-bar .content-box .form-left h2{
+.thought-leadership.two-column.weekly #randall-form.side-bar .content-box .form-left h2,
+.thought-leadership.two-column.books #randall-form.side-bar .content-box .form-left h2{
 	padding: 42px 0 0 0px;
 }
 .randall-image-box{
@@ -3570,7 +3576,9 @@ height: 75%;
     margin-right: -45px;
     margin-top: -61px;;
 }
-#randall-form .content-box .form-left p, .thought-leadership.two-column.weekly #randall-form.side-bar .content-box .form-left p,
+#randall-form .content-box .form-left p, 
+.thought-leadership.two-column.weekly #randall-form.side-bar .content-box .form-left p,
+.thought-leadership.two-column.books #randall-form.side-bar .content-box .form-left p,
 .thought-leadership.full-width.white-papers #randall-form .content-box .form-left p{
 	background-color: #364e6a;
 	padding: 17px 5.9%;
@@ -3607,7 +3615,7 @@ height: 75%;
 	color: #fff;
 }
 #randall-form .content-box .form-right h2{
-	  font-size: 1.4375em;
+	  font-size: 1.25em;
   font-weight: 700;
   color: #fff;
 }
@@ -3639,7 +3647,10 @@ height: 75%;
 }
 #randall-form .content-box .form-right .form-item input[type="text"],
 #randall-form .content-box .form-right .form-item input[type="email"],
-#randall-form .content-box .form-right .form-item textarea{
+#randall-form .content-box .form-right .form-item textarea,
+.form-item input[type="text"],
+.form-item input[type="email"],
+.form-item textarea{
 	width:100%;
 	height: 30px;
 	font-size:0.6875em;
@@ -3649,7 +3660,7 @@ height: 75%;
 #randall-form .content-box .form-right .form-item textarea{
 	height:110px;
 }
-#randall-form .content-box .form-right .form-item input[type="submit"]{
+#randall-form .content-box .form-right .form-item input[type="submit"], .form-item input[type="submit"] {
 	  font-size: .875em;
   font-weight: 700;
   text-align: center;
@@ -3818,12 +3829,12 @@ margin-bottom: 40px;
 }
 /*#most-reqested .content-box{width:100%; padding: 0 0px;}*/
 
-#room-setup, #growth-engagement, #choosing-speaker, #speak-topic-content, #video-content, #testimonials-list, #tl-books, #blog-content, #weekly-tipsheset, #whitepapers{
+#room-setup, #growth-engagement, #choosing-speaker, #speak-topic-content, #video-content, #testimonials-list, #tl-books, #blog-content, #weekly-tipsheset, #whitepapers, #ideatrust, #contact-page, #books{
 	margin-top: 30px;
 }
-#room-setup .content-box p.section-blurb, #choosing-speaker .content-box p.section-blurb, #weekly-tipsheset .content-box p.section-blurb{
+#room-setup .content-box p.section-blurb, #choosing-speaker .content-box p.section-blurb, #weekly-tipsheset .content-box p.section-blurb, #books .content-box p.section-blurb{
 	font-size: 0.9375em;
-	font-weight: 400;
+/*	font-weight: 400;*/
 	width: 90%;
 }
 #room-setup .content-box ul, #weekly-tipsheset .content-box ul{
@@ -3831,7 +3842,7 @@ margin-bottom: 40px;
     margin-top: 30px;
     padding-left: 0px;
 	 }
-#room-setup .content-box ul li, #weekly-tipsheset .content-box ul li{
+#room-setup .content-box ul li, #weekly-tipsheset .content-box ul li, #books .content-box ul li{
     display: inline-block;
     list-style: outside none none;
     vertical-align: top;
@@ -4332,7 +4343,7 @@ background-color: #7cabb7;
 #booking #randall-form .content-box .form-right{
 	background: #fff;
 }
-.green-txt{
+.green-txt, .content-box h3.green-hd{
 	color: #50b144;
 	font-weight: 700;
 }
@@ -4806,7 +4817,7 @@ color: #fff;
 border-left: none;
 margin-bottom: 0;
 }
-#ideastrust .content-box-bt{
+#ideastrust .content-box-bt, #kownledge-vault .content-box-bt{
 	color: #fff;
 }
 #recent-blogs .content-box ul {
@@ -4826,7 +4837,8 @@ margin-bottom: 0;
     padding: 20px 0 0;}
 #recent-blogs .content-box ul li span img, #blog-content .content-box .content-left-box ul li span img{
 	width:70px;
-	height: auto;
+	height: 70px;
+	border-radius: 50%;
 }
 #recent-blogs .content-box ul li h3, #blog-content .content-box .content-left-box ul li h3{
 	  font-size:0.8125em;
@@ -4991,7 +5003,7 @@ width: 104px;
 	padding-left: 0px;
 }
 .thought-leadership.inside-pages .content-box p.section-blurb{
-	padding-left: 0;
+/*	padding-left: 0;*/
 }
 .content-left-box h1 span{
 	  font-size:.6125em;
@@ -5021,6 +5033,9 @@ width: 104px;
 .entry-content{
 	font-size: initial;
 	padding-bottom: 30px;
+}
+#books .entry-content{
+	padding-bottom: 0;
 }
 .content-box .entry-content p{
 	font-size: .875em;
@@ -5196,7 +5211,7 @@ h3.tablet-content{
 	 .other-topics ul li{
 		 padding: 5px 0;
 	 }	 
-.weekly .other-sidebar{
+.weekly .other-sidebar, .books .other-sidebar{
 	display: none;
 }
 
@@ -5237,14 +5252,350 @@ ul.whitepaper-list li .whitepaper-detail h2{
 ul.whitepaper-list li .whitepaper-detail p{
 	clear:both;
 }
+.entry-post{
+	margin: 35px 0;
+	padding:0 0 0 0px;
+}
+#books .entry-post{
+	margin-bottom: 0;
+}
+.content-box .entry-content h2{
+	font-size:1.5em;
+	margin-bottom: 18px;
+}
+.content-box .entry-content h3{
+	margin-bottom: 18px;
+}
+.content-box .entry-content h4{
+	font-size:0.9375em;
+	color: #2d2d2d;
+}
+.content-box .entry-content h5{
+	font-size:1em;
+	font-weight: 700;
+	margin-bottom: 5px
+}
+.content-box .entry-content p{
+	font-size:1em;
+}
 
+.whitepaper-form{
+	 background-color: #ffffff;
+  box-shadow: 0 0 6px 0 rgba(0, 0, 0, 0.5);
+	padding: 28px 20px;
+}
+#whitepaper-subscription .whitepaper-form h3{
+	font-size:1.0625em;
+  font-weight: 700;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: 1.24;
+  letter-spacing: normal;
+  color: #50b144;
+	margin-bottom: 25px;
+}
+#whitepaper-subscription .whitepaper-form h3 span{
+	color: #364e6a;
+	display: block;
+}
+.whitepaper-form > div{
+	display: inline-block;
+	vertical-align: top;
+	margin-right: -3px;
+}
+.whitepaper-form .thumb-holder{ width: 106px;	margin-right: 47px; display: none;}
+.whitepaper-form .thumb-holder img{
+	width:100%; height: auto;
 
+}
+.whitepaper-form .form-entry{width: 100%;
+margin-right: 0%;}
+.whitepaper-form .captcha-entry{ width:100%;
+margin-right: 0%;}
+.whitepaper-form .condition-entry{ width: 100%;
+margin-right: -3px;}
+.whitepaper-form > div label{
+	width:80%;
+	display: inline-block;
+	vertical-align: top;
+  font-size: .75em;
+  font-weight: 400;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #364e6a;	
+}
+.whitepaper-form .condition-entry .custom-check{
+	margin-right: 13px;
+	display: inline-block;
+	vertical-align: top;
+}
+.captcha-box{
+background-color: #d8d8d8;
+height: 53px;
+width: 100%;
+margin-bottom: 8px;
+}
+.whitepaper-form .captcha-entry p{
+font-size: 0.8125em;
+font-weight: 400;
+line-height: 1.38;
+letter-spacing: normal;
+color: #364e6a;
+margin-bottom: 8px;
+}
 
+.whitepaper-form .form-item{
+	margin-bottom: 23px
+}
+.whitepaper-form .condition-entry input[type="submit"]{
+	width:100%;
+	font-weight: 400;
+	text-align: center;
+}
 
+.ideatrust .content-box .entry-content h2{
+	font-size: 1.25em;
+	font-weight: 700;
+  line-height: 1.3;
+  letter-spacing: normal;
+  color: #50b144;
+}
 
+.ideatrust-sidebar ul li{
+	text-align: left;
+	list-style: none;
+	margin-bottom: 35px;
+}
+.ideatrust-sidebar ul li p{
+	margin-bottom: 0;
+	display: inline-block;
+	vertical-align: middle;
+	width: 63%;
+}
+.ideatrust-sidebar ul li a{
+	color: #1c1c1c;
+}
+.ideatrust-sidebar ul li span{
+	display: inline-block;
+	margin-bottom: 0px;
+	vertical-align: middle;
+	margin-right:14px;
+}
+#kownledge-vault{
+background-image: url(images/banner/ideatrust-bkg-img.jpg);
+background-repeat: no-repeat;
+background-size: cover;
+width: 100%;
+height: 219px;
+float: left;
+display: table;
+position: relative;
+margin-bottom: 0px;
+}
+#kownledge-vault h2, #kownledge-vault p{
+	display: inline-block;
+	vertical-align: middle;
+	width:80%;
+	max-width: 80%;
+		margin-left:0%;
+	margin-bottom: 0
+}
+#kownledge-vault .content-wrap{
+width: 78%;
+display: table-cell;
+vertical-align: middle;
+padding: 35px 0;
+}
+#kownledge-vault .content-wrap .content-box{
+display: inline;
+text-align: center;
+}
+#kownledge-vault p{
+	color: #fff;
+	text-align: center;
+	margin:25px 0 25px 5%;
+  font-size: 1.3125em;
+  font-weight:700;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: 1.24;
+  letter-spacing: normal;
+  text-align: center;
+  color: #ffffff;	
 
+}
+#kownledge-vault .content-box-bt{
+	position: absolute;
+bottom: 10%;
+right: 5%;
+ width: 266px;
+  height: 43px;
+  background-color: #4fb144;
+	  font-size: 1.25em;
+  font-weight: 700;
+  line-height: 36px;
+  letter-spacing: normal;
+  text-align: center;
+  color: #ffffff;
+	background-image: none;
+	padding-right: 0;
+	float: none;
+	position: static;
+	display: inline-block;
 
+}
+#kownledge-vault .content-box-bt:hover{
+	background-image:none !important;
+	text-decoration: none;
+}
+.thought-leadership.two-column.ideatrust .entry-content{
+	padding-bottom: 0;
+}
+.contact-page-left, .contact-page-right{
+	display: inline-block;
+	vertical-align: top;
+	width:100%;
+	padding-top: 0px;} 
+.content-box .contact-page-left{
+	border-right: 0px solid #4fb144;
+	padding-right: 0px;
+	padding-bottom: 0px;
+	margin-bottom: 0px;
+	padding-top: 10px;
 
+}
+.content-box .contact-page-right{
+	padding-left: 0px;
+	padding-bottom: 37px;
+}
+.contact-page-left ul li{
+	list-style: none;
+	line-height: 1.43;
+	margin-bottom: 30px
+}
+.content-box .contact-page-left h4, .content-box .books-entry h4{
+	  font-size:1.0625em;
+  font-weight: 700;
+  line-height: 1.18;
+  letter-spacing: normal;
+  color: #50b144;
+	margin-bottom: 8px;
+	
+}
+.content-box .books-entry h4{
+	clear: none;
+	font-size:1.125em;
+	display: table;
+	height: 62px;
+}
+.content-box .books-entry h4 a{
+	display: table-cell;
+	vertical-align: middle;
+}
+.content-box .contact-page-left h4 a:hover{
+	text-decoration: underline;
+}
+.content-box .contact-page-left p{
+		  font-size:1.0625em;
+  font-weight: 400;
+  line-height: 1.38;
+  letter-spacing: normal;
+  color: #2d2d2d;
+	margin-bottom: 10px
+}
+.content-box .contact-page-left p span{
+font-weight: 700;
+	color: #50b144;
+}
+.content-box .contact-page-left ul li > span{
+	width: 54px;
+	display: inline-block;
+	vertical-align: top;
+	margin-right: 20px;
+	border-radius: 50%;
+}
+.content-box .contact-page-left ul li .entry-contact{
+	display: inline-block;
+	vertical-align: top;
+	width: 70%;
+}
+.content-box .contact-page-left ul li .entry-contact span{
+	display: block;
+	font-size:1.0625em;
+	color: #364e6a;
+}
+.content-box .contact-page-left ul li .entry-contact span a{ color: #364e6a;}
+.content-box .contact-page-left ul li > span img{
+	border:2px solid #50b144;
+	border-radius: 50%;
+}
+.mailing{
+	margin-top: 40px
+}
+.contact-page-right .form-right{
+	  background-color: #ffffff;
+  box-shadow: none
+	width:100%;
+	padding: 30px 0px 35px;
+}
+.content-box .contact-page-right h2{
+	font-size: 1.4375em;
+	font-weight: 700;
+}
+.contact-page-right .form-right .form-fields{
+	width:100%;
+}
+.contact-page-right .form-right .form-item textarea {
+    height: 110px;
+}
+.content-box .entry-content .book-showcase li{
+	font-size: inherit;
+	margin-bottom: 50px
+}
+.content-box .entry-content .book-showcase li p{
+	font-size:1em;
+	float: left;
+}
+.book-showcase li > span, .book-showcase li .books-entry{
+	display: inline;
+	vertical-align: middle;
+}
+.content-box .entry-content .book-showcase li > span{
+	width:50px;
+	height: auto;
+	float: left;
+	margin-right: 7px;
+}
+.book-showcase li > span img{
+	width:100%;
+}
+.book-showcase li .books-entry{
+	width:69%;
+	margin-left: 0px;
+	
+}
+#books-summary {
+	background-image: url(images/banner/rc_books_page_bg.png);
+	background-repeat: no-repeat;
+	background-size: cover;
+	width:100%;
+	max-width: none;
+	height: 420px;
+	display: table;
+}
+#books-summary h2{
+	display: table-cell;
+	vertical-align: middle;
+	  font-size: 1.375em;
+  font-weight: 700;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: 1.64;
+  letter-spacing: normal;
+  color: #ffffff;
+	text-align: left;
+	padding: 0 10%;
+}
 /* -
 ///
 ////////
@@ -5304,7 +5655,7 @@ section, .section-wrap, #next-step .content-box, #stage .content-box, #choose-sp
 	 picture{
 		 width:100%;
 	 }
-.about-randall .banner-wrap img, .speaking .banner-wrap img, .thought-leadership .banner-wrap img{
+.about-randall .banner-wrap img, .speaking .banner-wrap img, .thought-leadership .banner-wrap img, .media .banner-content img{
 	width: auto;
 	margin-left: 0;
 	margin-right: 0;
@@ -5332,7 +5683,7 @@ section, .section-wrap, #next-step .content-box, #stage .content-box, #choose-sp
 	
 }		 
  
-.speaking .banner-content{
+.speaking .banner-content, .media .banner-content{
  border-radius: 375px;
     height: 411px;
     left: -109px;
@@ -5340,7 +5691,7 @@ section, .section-wrap, #next-step .content-box, #stage .content-box, #choose-sp
     width: 395px;
 	
 }
-.speaking .banner-content{
+.speaking .banner-content, .media .banner-content{
    padding: 322px 4% 0 130px;
 	
 }		
@@ -5353,7 +5704,7 @@ padding: 290px 4% 0 104px;
 top: -204px;
 width: 415px;
 	 }
-.speaking .banner-content h1, .thought-leadership .banner-content h1{
+.speaking .banner-content h1, .thought-leadership .banner-content h1, .media .banner-content h1{
 	font-size: 1.875em;
 	line-height: normal
 }
@@ -6907,6 +7258,7 @@ color: #fff;
 .banner-learn-more{ font-size:16px;}
 .content-box h2{ color:#50b144; font-size:1.625em; font-weight:700}
 .desktop-content{ display:block !important;}
+#books-summary.desktop-content{ display:table!important;}
 .mobile-content{ display:none !important;}
 
 
@@ -7207,7 +7559,7 @@ height: 180px;
     padding: 21px 0 0;
     width: 66.8%;
 }
-	 .weekly .subscribe-form{
+	 .weekly .subscribe-form, .books .subscribe-form{
 		 width: 100%
 	 }
 	 .thought-leadership #make-it-happen{ background: #9bd3e0 none repeat scroll 0 0;}	 
@@ -7230,17 +7582,20 @@ margin-top: 15px;
   font-weight: 700;
   color: #364e6a;
 	 border: none;}
-	 .weekly .subscribe-form li input{
+	 .weekly .subscribe-form li input,
+	 .books .subscribe-form li input{
 		 padding:9px 10px;  font-size:0.8125em;
 		 font-weight: 700;
 	 }	 
 #make-it-happen .content-box ul li input[type="submit"],
-.weekly .subscribe-form li input[type="submit"]	{ 
+.weekly .subscribe-form li input[type="submit"],
+.books .subscribe-form li input[type="submit"]{ 
 	width: auto;background-color: #364e6a;  font-size: .875em;
   font-weight: 700;
   color: #ffffff;
 	 padding: 6px 10px;}	
-.weekly .subscribe-form li input[type="submit"]	{ 
+.weekly .subscribe-form li input[type="submit"],
+.books .subscribe-form li input[type="submit"]{ 
 	width: auto;background-color: #4fb144;  font-size: .875em;
   font-weight: 700;
   color: #ffffff;
@@ -7336,27 +7691,39 @@ border: none;}
 	 }	
 .speaking #randall-form .content-box .form-left h2, 
 .thought-leadership.two-column.weekly #randall-form.side-bar .content-box .form-left h2,
+.thought-leadership.two-column.books #randall-form.side-bar .content-box .form-left h2,
 html .thought-leadership.full-width.white-papers #randall-form .content-box .form-left h2	 {
 	padding: 44px 0 0 2px;
 }	 
-#randall-form .content-box .form-left, .thought-leadership.two-column.weekly #randall-form.side-bar .content-box .form-left,
+	 .thought-leadership.two-column.weekly #randall-form.side-bar.books .content-box .form-left h2{
+		 padding: 34px 0 0 2px;
+	 }	 
+#randall-form .content-box .form-left, 
+.thought-leadership.two-column.weekly #randall-form.side-bar .content-box .form-left,
+.thought-leadership.two-column.books #randall-form.side-bar .content-box .form-left, 
 html .thought-leadership.full-width.white-papers #randall-form .content-box .form-left {
  max-width: 333px;
     width: 45.09%;
 	
 }
 	 
-#randall-form .content-box .form-right, .thought-leadership.two-column.weekly #randall-form.side-bar .content-box .form-right{
+#randall-form .content-box .form-right, 
+.thought-leadership.two-column.weekly #randall-form.side-bar .content-box .form-right,
+.thought-leadership.two-column.books #randall-form.side-bar .content-box .form-right{
 	width: 52.90%;
 		background-color: #fff;
 	display: inline-block;
 }	 
 	 
-.randall-image-box, .choosing-speaker #randall-form .randall-image-box, .thought-leadership.two-column.weekly #randall-form.side-bar .randall-image-box, html .thought-leadership.full-width.white-papers #randall-form .randall-image-box{
+.randall-image-box, .choosing-speaker #randall-form .randall-image-box, 
+.thought-leadership.two-column.weekly #randall-form.side-bar .randall-image-box,
+.thought-leadership.two-column.books #randall-form.side-bar .randall-image-box,
+html .thought-leadership.full-width.white-papers #randall-form .randall-image-box{
 	height: 177px;
 	width:100%
 }	 
-	 .thought-leadership.weekly #randall-form.side-bar .randall-image-box img{
+	 .thought-leadership.weekly #randall-form.side-bar .randall-image-box img,
+	 .thought-leadership.books #randall-form.side-bar .randall-image-box img{
 		 height: auto;
 	 }	 
 .randall-image-box img, .choosing-speaker #randall-form .randall-image-box img, html .thought-leadership.full-width.white-papers #randall-form .randall-image-box img {
@@ -7451,9 +7818,11 @@ color: #ffffff;
 	 #sub-nav > ul > li > a {
 		 text-transform: uppercase;
 	 }
+/*
 	 #sub-nav ul li:last-child a{
 		 padding-right: 0;
 	 }
+*/
 
 	 #sub-nav ul li.active a,  #sub-nav ul li.page_item_has_children:hover a{
     background: #fff none repeat scroll 0 0;
@@ -7525,7 +7894,7 @@ padding-left: 0;
 	 .speaking #sub-nav ul li.page_item_has_children:hover ul li:last-child{
 		 padding-bottom: 0;
 	 }
-#sub-nav ul li.active-non-arw a{
+#sub-nav ul li.active-non-arw a, #sub-nav ul li.current_page_item a{
     background: #fff none repeat scroll 0 0;
     color: #364e6a;
     position: relative;
@@ -8137,7 +8506,8 @@ font-size: 1em;
 .thought-leadership.two-column #randall-form .content-box .form-left .form-contact	 {
     width: 28%;
 }	 
-.thought-leadership.two-column.weekly #randall-form.side-bar .content-box .form-left p {
+.thought-leadership.two-column.weekly #randall-form.side-bar .content-box .form-left p,
+.thought-leadership.two-column.books #randall-form.side-bar .content-box .form-left p{
 	width: 100%;
 	height: auto;
 	padding: 30px 8.9%;
@@ -8145,6 +8515,7 @@ font-size: 1.0625em;
 line-height: 1.43;
 }	 
 .thought-leadership.two-column.weekly #randall-form .content-box .form-left .form-contact,
+.thought-leadership.two-column.books #randall-form .content-box .form-left .form-contact,
 html .thought-leadership.full-width.white-papers #randall-form .content-box .form-left .form-contact {
     width: 100%;
 	height: auto;
@@ -8190,7 +8561,8 @@ html .thought-leadership.full-width.white-papers #randall-form .randall-image-bo
     top: -86px;
     width: 164px;
 	 }
-.thought-leadership.two-column.weekly #randall-form.side-bar .randall-image-box, .thought-leadership.two-column.weekly #randall-form.side-bar .randall-image-box, html .thought-leadership.full-width.white-papers #randall-form .content-box .form-left .randall-image-box{
+.thought-leadership.two-column.weekly #randall-form.side-bar .randall-image-box, 
+.thought-leadership.two-column.books #randall-form.side-bar .randall-image-box, html .thought-leadership.full-width.white-papers #randall-form .content-box .form-left .randall-image-box{
 	height: 177px;
 	width:100%;
 	max-width:100%;
@@ -8392,6 +8764,10 @@ margin-left: 3.2%
 .weekly .entry-content{
 	width: 71%;
 	display: inline-block;
+}	
+.books .entry-content{
+	width: 100%;
+	display: inline-block;
 }	 
 	 .weekly .other-sidebar	{
 		 width:27.5%;
@@ -8401,12 +8777,14 @@ margin-left: 3.2%
 	 .weekly .other-sidebar .categories, .weekly .other-sidebar .archive{
 		 width: 100%;
 	 }	
-	 .thought-leadership.two-column.weekly #randall-form .randall-image-box img	{
+	 .thought-leadership.two-column.weekly #randall-form .randall-image-box img,
+	 .thought-leadership.two-column.books #randall-form .randall-image-box img{
 		 width:auto;
 		 max-width: 121%;
 		 margin-top: -21px;
 	 }
-	 .weekly .section-wrap{
+	 .weekly .section-wrap,
+	 .books .section-wrap{
 		 padding-bottom: 50px;
 	 }
 	 ul.whitepaper-list{
@@ -8443,6 +8821,142 @@ ul.whitepaper-list li .whitepaper-detail h2{
 	height: 180px;
 	display: table-cell;
 	vertical-align: middle;
+}	
+	 
+.whitepaper-form{
+	padding: 28px 26px;
+}
+#whitepaper-subscription .whitepaper-form h3 span{
+	display: inherit;
+}	 
+.whitepaper-form .thumb-holder {
+    margin-right: 20px;
+	display: inline-block;
+}
+.whitepaper-form .form-entry{width: 22.5%;
+margin-right: 2.7%;}
+.whitepaper-form .captcha-entry{width: 25%;
+margin-right: 2.5%;}
+.whitepaper-form .condition-entry{width: 25.5%;
+margin-right: -3px;}	 
+.whitepaper-form .condition-entry .form-item {
+    margin-bottom: 15px;
+}	
+	 .whitepaper-form .condition-entry input[type="submit"]{
+	width:auto;
+
+}
+#kownledge-vault{
+height: 219px;
+	 }
+	 .ideatrust-sidebar ul{
+		 text-align: center;
+	 }
+	 .ideatrust-sidebar ul li{
+		 width:30%;
+		 display: inline-block;
+		 vertical-align: top;
+		 margin-right: 3%;
+		 text-align: center;
+	 }
+	 .ideatrust-sidebar ul li p{
+		 width:100%;
+	 }	 
+.ideatrust-sidebar ul li span{
+	display: inline-block;
+	margin-bottom: 20px;
+}	 
+#kownledge-vault p{
+	color: #fff;
+	text-align: left;
+	margin-right: 5%;
+	font-size:0.9375em;
+	font-weight: 400;
+	 line-height: 1.47;
+}
+#kownledge-vault h2, #kownledge-vault p{
+	display: inline-block;
+	vertical-align: middle;
+	width:auto;
+	max-width: 44%;
+		margin-left:7%;
+	margin-bottom: 0;
+	margin-top: 0;
+}	 
+#kownledge-vault .content-box-bt{
+	position: absolute;
+bottom: 10%;
+right: 5%;
+ width: auto;
+  height: auto;
+  background-color: transparent;
+	  font-size:1.0625em;
+  font-weight: 700;
+  line-height: 1.05;
+  letter-spacing: normal;
+  text-align: center;
+  color: #ffffff;
+background-image: url(images/icons/green-go-button.png);   background-position: right center;
+    background-repeat: no-repeat;
+    padding: 4px 28px 4px 0;
+    text-decoration: none;
+	text-decoration:none; float:right; margin-right:0px;
+	
+}
+	 #kownledge-vault .content-box-bt:hover{
+		 background-image: url(images/icons/green-go-button.png) !important; 
+	 }
+.contact-page-left, .contact-page-right{
+	display: inline-block;
+	vertical-align: top;
+	width:49%;
+	padding-top: 30px;} 
+.content-box .contact-page-left{
+	border-right: 2px solid #4fb144;
+	padding-right: 40px;
+	padding-bottom: 37px;
+	margin-bottom: 60px
+
+}
+.content-box .contact-page-right{
+	padding-left: 60px;
+	padding-bottom: 37px;
+}	
+.contact-page-right .form-right{
+	  background-color: #ffffff;
+  box-shadow: 0 1px 6px 0 rgba(0, 0, 0, 0.5);
+	width:90%;
+	padding: 30px 44px 35px;
+}	 
+.content-box .contact-page-right h2{
+	font-size: 1.4375em;
+}	 
+.content-box .contact-page-left h4, .content-box .contact-page-left p{
+	  font-size:1em;
+}
+.book-showcase li .books-entry{
+	width:69%;
+	margin-left: 35px;
+	
+}	 
+	 .content-box .books-entry h4{
+		 font-size:1.0625em;
+		 display: inline;
+		 height: auto;
+	 }
+.content-box .entry-content .book-showcase li p{
+	font-size:0.9375em;
+	float:none;
+}
+.book-showcase li > span, .book-showcase li .books-entry{
+	display: inline-block;
+	vertical-align: middle;
+}	 
+.content-box .entry-content .book-showcase li > span{
+	width:136px;
+	height: auto;
+	float: none;
+	margin-right: 0;
 }	 
 }
  /* -
@@ -8482,8 +8996,8 @@ html .nav {
 	float: none;
 	margin-top: 0;
 }	 
-.banner-wrap img, .about-randall .banner-wrap img, .speaking .banner-wrap img, .thought-leadership .banner-wrap img { margin-left: 0; margin-right: 0}
-.banner-wrap img, .banner-wrap-inside img, .about-randall .banner-wrap img, .speaking .banner-wrap img, .thought-leadership .banner-wrap img {
+.banner-wrap img, .about-randall .banner-wrap img, .speaking .banner-wrap img, .thought-leadership .banner-wrap img, .media .banner-content img { margin-left: 0; margin-right: 0}
+.banner-wrap img, .banner-wrap-inside img, .about-randall .banner-wrap img, .speaking .banner-wrap img, .thought-leadership .banner-wrap img, .media .banner-content img {
 	width:100%;
 	
 }		 
@@ -8516,7 +9030,7 @@ section, .section-wrap, #choose-speaker .content-box, #about-randall .content-bo
     max-width: 1170px;
     width: 91.6%; }
 
-.speaking .banner-content{
+.speaking .banner-content, .media .banner-content{
     padding:322px 4% 0 150px;
 	
 }	
@@ -8899,7 +9413,10 @@ width:100%;
 	width:41.09%;
 	
 }	
-.randall-image-box, .choosing-speaker #randall-form .randall-image-box, .thought-leadership.two-column.weekly #randall-form.side-bar .randall-image-box, html .thought-leadership.full-width.white-papers #randall-form .randall-image-box{
+.randall-image-box, .choosing-speaker #randall-form .randall-image-box, 
+	 .thought-leadership.two-column.weekly #randall-form.side-bar .randall-image-box, 
+	 .thought-leadership.two-column.books #randall-form.side-bar .randall-image-box, 
+	 html .thought-leadership.full-width.white-papers #randall-form .randall-image-box{
 	height: 137px;
 }	
 .randall-image-box img, .choosing-speaker #randall-form .randall-image-box img, html .thought-leadership.full-width.white-papers #randall-form .randall-image-box img {
@@ -8918,7 +9435,9 @@ width:100%;
 	margin-left: 25px;
 	margin-top: 0;
 }	 
-#randall-form .content-box .form-left p, .thought-leadership.two-column.weekly #randall-form.side-bar .content-box .form-left p,
+#randall-form .content-box .form-left p, 
+.thought-leadership.two-column.weekly #randall-form.side-bar .content-box .form-left p,
+.thought-leadership.two-column.books #randall-form.side-bar .content-box .form-left p,
  html .thought-leadership.full-width.white-papers #randall-form .content-box .form-left p {
 	padding: 17px 5.9%;
 	  font-size: 1.0625em;
@@ -8962,10 +9481,16 @@ width:100%;
 	margin-right: 30px;
 	 }	
 #most-reqested .content-box{padding: 0 0px;}	 
-#room-setup .content-box, #weekly-tipsheset .content-box{
+#room-setup .content-box, #weekly-tipsheset .content-box, #books .content-box{
 		  padding: 0 300px 0 0px;
 	 }	
-	 #randall-form.side-bar, #next-step-testimonials.side-bar, #make-it-happen.side-bar, #make-it-happen.side-bar.blog-inside, #randall-form.side-bar.fixed-width, .thought-leadership.two-column.weekly	 #randall-form{
+	 #randall-form.side-bar, 
+	 #next-step-testimonials.side-bar, 
+	 #make-it-happen.side-bar, 
+	 #make-it-happen.side-bar.blog-inside, 
+	 #randall-form.side-bar.fixed-width, 
+	 .thought-leadership.two-column.weekly #randall-form,
+	 .thought-leadership.two-column.books #randall-form{
 		 position: absolute;
 		 left:auto;
    right: 0px;
@@ -8984,14 +9509,18 @@ max-width: 251px;
 	 #next-step-testimonials.side-bar .content-box{
 		 padding: 0;
 	 }
-	 #randall-form.side-bar .content-box, .thought-leadership.two-column.weekly #randall-form.side-bar .content-box{
+	 #randall-form.side-bar .content-box, 
+	 .thought-leadership.two-column.weekly #randall-form.side-bar .content-box,
+	 .thought-leadership.two-column.books #randall-form.side-bar .content-box{
 		 width:100%;
 		 margin-left: 0;
 	 }	 
 	 #randall-form.side-bar .content-box .form-left,
  	 #randall-form.side-bar .content-box .form-right,
 	 .thought-leadership.two-column.weekly #randall-form.side-bar .content-box .form-left,
-	 .thought-leadership.two-column.weekly #randall-form.side-bar .content-box .form-right{
+	 .thought-leadership.two-column.weekly #randall-form.side-bar .content-box .form-right,
+	 .thought-leadership.two-column.books #randall-form.side-bar .content-box .form-left,
+	 .thought-leadership.two-column.books #randall-form.side-bar .content-box .form-right{
 		 width:100%;
 	 }
 .randall-image-box > div, .thought-leadership.weekly #randall-form.side-bar .randall-image-box > div {
@@ -9008,26 +9537,35 @@ max-width: 251px;
 		 overflow: hidden;
 	 }
 */
-#randall-form.side-bar .randall-image-box img, .thought-leadership.weekly #randall-form.side-bar .randall-image-box img {
+#randall-form.side-bar .randall-image-box img, 
+	.thought-leadership.weekly #randall-form.side-bar .randall-image-box img,
+	.thought-leadership.books #randall-form.side-bar .randall-image-box img{
     margin-right: -46px;
     margin-top: 0;
     vertical-align: bottom;
     width: 125%;
 
 }	 
-#randall-form.side-bar .content-box .form-left p, .thought-leadership.two-column.weekly #randall-form.side-bar .content-box .form-left p {
+#randall-form.side-bar .content-box .form-left p, 
+	.thought-leadership.two-column.weekly #randall-form.side-bar .content-box .form-left p,
+	 .thought-leadership.two-column.books #randall-form.side-bar .content-box .form-left p{
     font-size: .6875em;
 	width: 100%;
 	height: auto;
 }
-#randall-form.side-bar .content-box .form-left span, .thought-leadership.two-column.weekly #randall-form.side-bar .content-box .form-left span:nth-of-type(1) {
+#randall-form.side-bar .content-box .form-left span, 
+.thought-leadership.two-column.weekly #randall-form.side-bar .content-box .form-left span:nth-of-type(1),
+.thought-leadership.two-column.books #randall-form.side-bar .content-box .form-left span:nth-of-type(1){
 	 font-size: 1.25em;
     width: 100%;
 }	 
-.thought-leadership.two-column.weekly #randall-form.side-bar .content-box .form-left span:nth-of-type(1){
+.thought-leadership.two-column.weekly #randall-form.side-bar .content-box .form-left span:nth-of-type(1),
+.thought-leadership.two-column.books #randall-form.side-bar .content-box .form-left span:nth-of-type(1){
 	padding: 15px 0;
 	 }
-#randall-form.side-bar .content-box .form-left span:nth-of-type(2), .thought-leadership.two-column.weekly #randall-form.side-bar .content-box .form-left span:nth-of-type(2) {
+#randall-form.side-bar .content-box .form-left span:nth-of-type(2), 
+.thought-leadership.two-column.weekly #randall-form.side-bar .content-box .form-left span:nth-of-type(2),
+.thought-leadership.two-column.books #randall-form.side-bar .content-box .form-left span:nth-of-type(2){
     font-size: 1em;
     padding-top: 0;
     width: 100%;
@@ -9088,13 +9626,17 @@ max-width: 251px;
     left: -25px;
     top: -45px;
 	 }	 
-.what-include, .value-beyond, .deliver-option, .other-topics, .other-sidebar{
+.what-include, .value-beyond, .deliver-option, .other-topics, .other-sidebar, .ideatrust-sidebar{
 		 position:absolute;
 		 top:0;
 		 right: 0px;
 		 width: 205px;
 	margin-top: 57px
 	 }
+	 .ideatrust-sidebar{
+		 width:235px;
+		 margin-top: 37px;
+	 }	 
 .video-page #value-event .content-box .value-beyond{
 	margin-top: 25px;
 	 }
@@ -9378,7 +9920,7 @@ display:inline-block;
 		 width: 100%;
 		 max-width: 100%;
 	 }
-.thought-leadership.two-column #randall-form.side-bar.fixed-width, .thought-leadership.two-column #randall-form .content-box, .thought-leadership.two-column #randall-form .content-box .form-left{
+.thought-leadership.two-column #randall-form.side-bar.fixed-width, .thought-leadership.two-column #randall-form .content-box, /*.thought-leadership.two-column #randall-form .content-box .form-left*/{
 	width: inherit;
 	 }	 
 .thought-leadership.full-width #randall-form .content-box .form-left .randall-image-box,
@@ -9390,7 +9932,8 @@ display:inline-block;
 	float:left;
 	height: 96px 
 	 } 
-	 .thought-leadership.two-column.weekly #randall-form .content-box .form-left .randall-image-box{
+	 .thought-leadership.two-column.weekly #randall-form .content-box .form-left .randall-image-box,
+	 .thought-leadership.two-column.books #randall-form .content-box .form-left .randall-image-box{
 		 height: 131px;
 	 }
 	 html .thought-leadership.full-width.white-papers #randall-form .content-box .form-left .randall-image-box{
@@ -9408,6 +9951,7 @@ display:inline-block;
 		 max-width: 330px
 	 }	 
 	 .thought-leadership.weekly #randall-form .content-box .form-left .randall-image-box,
+	 .thought-leadership.books #randall-form .content-box .form-left .randall-image-box,
 	 .thought-leadership.full-width.white-papers #randall-form .content-box .form-left .randall-image-box,
 	 .thought-leadership.full-width.white-papers #randall-form .content-box .form-left p,
 	 html .thought-leadership.full-width.white-papers #randall-form .content-box .form-left .form-contact{
@@ -9474,7 +10018,8 @@ html .thought-leadership.full-width.white-papers #randall-form .content-box .for
 .thought-leadership.full-width #randall-form .content-box .form-left h2,
 .thought-leadership.two-column #randall-form .content-box .form-left h2,
 	 .thought-leadership.two-column #randall-form .content-box .form-left h2, 
-	 .thought-leadership.weekly #randall-form .content-box .form-left h2
+	 .thought-leadership.weekly #randall-form .content-box .form-left h2,
+	 .thought-leadership.books #randall-form .content-box .form-left h2
 	 {
     font-size: 1.375em;
     height: 164px;
@@ -9653,7 +10198,7 @@ max-width: 41.6%;
 	 .blog-inside .other-topics{
 		 margin-top: 50px;
 	 }
-	 .weekly .entry-content{
+	 .weekly .entry-content, .books .entry-content{
 		 width: 100%;
 	 }
 ul.whitepaper-list li{
@@ -9676,6 +10221,45 @@ ul.whitepaper-list li .whitepaper-detail h2{
   color: #50b144;
 	display: inline-block;
 	height: auto
+}	
+.whitepaper-form{
+	padding: 28px 50px;
+}
+.entry-post{
+	padding:0 0 0 18px;
+}
+.whitepaper-form .thumb-holder {
+    margin-right: 47px;
+}	 
+.whitepaper-form .form-entry{width: 26.5%;
+margin-right: 3%;}
+.whitepaper-form .captcha-entry{ width: 26%;
+margin-right: 3%;}
+.whitepaper-form .condition-entry{ width: 20.5%;
+margin-right: -3px;}	 
+.whitepaper-form .condition-entry .form-item {
+    margin-bottom: 23px;
+}	 
+	 .ideatrust .entry-content, .thought-leadership.two-column.ideatrust .entry-content	{
+		 width:70%;
+		 padding-bottom: 30px;
+	 }
+.ideatrust-sidebar ul li{
+	text-align: center;
+	list-style: none;
+	margin-bottom: 35px;
+	width:100%;
+}	 
+#kownledge-vault{
+background-image: url(images/banner/ideatrust-bkg-img.jpg);
+background-repeat: no-repeat;
+background-size: cover;
+width: 67%;
+height: 219px;
+float: left;
+display: table;
+position: relative;
+margin-bottom: 67px;
 }	 
 }
 
@@ -9760,7 +10344,7 @@ width: 184px; height: 136px;
 }
 .content-box p.section-blurb{
 	  font-size: 1.0625em;
-  font-weight:400;
+/*  font-weight:400;*/
 	width: 70%;
 }	
 .choose-speaker-content ul li:last-child{
@@ -9915,7 +10499,7 @@ width:74%;
 .content-left-box{
 /*	 max-width: 805px;*/
 	 }
-	 .what-include, .value-beyond{
+	 .what-include, .value-beyond, .ideatrust-side{
 		 position:absolute;
 		 top:0;
 		 right: 0;
@@ -10010,6 +10594,12 @@ width:924px !important;
 	margin-left: 0;
 	display: inline-block;
 	margin: 0 auto;
+}	
+.whitepaper-form .form-entry{ width: 27.5%;}
+.whitepaper-form .captcha-entry{ width:26.5%;}
+.whitepaper-form .condition-entry{ width: 24%;}	
+.book-showcase li .books-entry{
+	width:76%;
 }	
 }
 
