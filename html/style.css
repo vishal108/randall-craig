@@ -294,7 +294,7 @@ html .lang-fr .lang-nav li.top-left-nav-en{padding: 2px 14px 8px 13px; }
 	margin-right:-5%;
 	width: 209%;
 	 }
-.speaking .banner-wrap img, .thought-leadership .banner-wrap img, .media .banner-content img{
+.speaking .banner-wrap img, .thought-leadership .banner-wrap img, .media .banner-content img, .meeting .banner-wrap img{
 margin-left: -25px;
 /*    max-width: 937px;*/
     vertical-align: bottom;
@@ -348,13 +348,13 @@ height: 269px;
     top: -156px;
     width: 266px;
 padding: 217px 0 0 77px;}
-.thought-leadership .banner-content{ background-color: rgba(79, 176, 68, 0.95);
-    height: 269px;
+.thought-leadership .banner-content, .meeting .banner-content{ background-color: rgba(79, 176, 68, 0.95);
+    height: 264px;
     left: -54px;
-    padding: 202px 0 0 77px;
+    padding: 202px 27px 0 77px;
     top: -148px;
     width: 266px;}
-.thought-leadership .banner-content h1{
+.thought-leadership .banner-content h1, .meeting .banner-content h1{
 	font-size: 1.125em;
 }
 .demo-button{background-image: url(images/icons/white-go-button.png);   background-position: right center;
@@ -3830,7 +3830,7 @@ margin-bottom: 40px;
 }
 /*#most-reqested .content-box{width:100%; padding: 0 0px;}*/
 
-#room-setup, #growth-engagement, #choosing-speaker, #speak-topic-content, #video-content, #testimonials-list, #tl-books, #blog-content, #weekly-tipsheset, #whitepapers, #ideatrust, #contact-page, #books, #story-page, #news-page, .news-partners{
+#room-setup, #growth-engagement, #choosing-speaker, #speak-topic-content, #video-content, #testimonials-list, #tl-books, #blog-content, #weekly-tipsheset, #whitepapers, #ideatrust, #contact-page, #books, #story-page, #news-page, .news-partners, #downloadable-images, #info-package, #event-resource, #generic{
 	margin-top: 30px;
 }
 #room-setup .content-box p.section-blurb, #choosing-speaker .content-box p.section-blurb, #weekly-tipsheset .content-box p.section-blurb, #books .content-box p.section-blurb{
@@ -4212,7 +4212,7 @@ background-color: #4fb144;
   color: #fff;
 
 }
-#booking .content-box .value-beyond ul li{
+#booking .content-box .value-beyond ul li, #info-package .content-box .value-beyond ul li{
 	list-style: none;
 	margin-bottom: 7px;
 	color: #fff;
@@ -4222,7 +4222,7 @@ background-color: #4fb144;
 	height: auto
 	
 }
-#booking .content-box .value-beyond ul li > ul li{
+#booking .content-box .value-beyond ul li > ul li, #info-package .content-box .value-beyond ul li > ul li{
    background-image: url("images/icons/white-bullet.png");
     background-position: 3px 6px;
     background-repeat: no-repeat;
@@ -4234,32 +4234,32 @@ background-color: #4fb144;
     padding: 0 0 0 25px;
 
 }
-#booking .content-box .value-beyond > ul > li:first-child h2{
+#booking .content-box .value-beyond > ul > li:first-child h2, #info-package .content-box .value-beyond > ul > li:first-child h2{
 	text-align: center;
 	color: #4a4a4a;
 	margin-left: 0;
 font-size:1.3125em
 
 }
-#booking .content-box .value-beyond > ul > li h2{
+#booking .content-box .value-beyond > ul > li h2, #info-package .content-box .value-beyond > ul > li h2{
 	text-align: left;
 	margin-left: 25px;
 }
-#booking .content-box .value-beyond > ul > li:first-child{
+#booking .content-box .value-beyond > ul > li:first-child, #info-package .content-box .value-beyond > ul > li:first-child{
 	border: solid 2px #4a4a4a;
 	padding: 10px 35px 0;
 		width:100%;
 }
-#booking .content-box .value-beyond > ul > li:nth-child(2){
+#booking .content-box .value-beyond > ul > li:nth-child(2), #info-package .content-box .value-beyond > ul > li:nth-child(2){
 background-color: #4fb144;
 }
-#booking .content-box .value-beyond > ul > li:nth-child(3){
+#booking .content-box .value-beyond > ul > li:nth-child(3), #info-package .content-box .value-beyond > ul > li:nth-child(3){
 background-color: #364e6a;
 }
-#booking .content-box .value-beyond > ul > li:nth-child(4){
+#booking .content-box .value-beyond > ul > li:nth-child(4), #info-package .content-box .value-beyond > ul > li:nth-child(4){
 background-color: #7cabb7;
 }
-#booking .content-box .value-beyond > ul > li:first-child:after{
+#booking .content-box .value-beyond > ul > li:first-child:after, #info-package .content-box .value-beyond > ul > li:first-child:after{
   background-color: #fff;
     border-bottom: 2px solid #364e6a;
     border-right: 2px solid #364e6a;
@@ -4273,7 +4273,7 @@ background-color: #7cabb7;
     width: 13px;
     z-index: 2;
 }
-#booking .content-box .value-beyond > ul > li:after{
+#booking .content-box .value-beyond > ul > li:after, #info-package .content-box .value-beyond > ul > li:after{
     bottom: -8px;
     content: "";
     height: 13px;
@@ -4285,7 +4285,8 @@ background-color: #7cabb7;
     z-index: 2;
 }
 
-#booking .content-box .value-beyond > ul > li:first-child:before, #booking .content-box .value-beyond > ul > li:before{
+#booking .content-box .value-beyond > ul > li:first-child:before, #booking .content-box .value-beyond > ul > li:before,
+#info-package .content-box .value-beyond > ul > li:first-child:before, #info-package .content-box .value-beyond > ul > li:before{
    background: #fff none repeat scroll 0 0;
     bottom: -15px;
     content: "";
@@ -4297,18 +4298,22 @@ background-color: #7cabb7;
     width: 18px;
     z-index: 1;
 }
-#booking .content-box .value-beyond > ul > li:nth-child(2):after{
+#booking .content-box .value-beyond > ul > li:nth-child(2):after,
+#info-package .content-box .value-beyond > ul > li:nth-child(2):after{
   background-color: #4fb144;
     bottom: -7px;
 }
-#booking .content-box .value-beyond > ul > li:nth-child(3):after{
+#booking .content-box .value-beyond > ul > li:nth-child(3):after,
+#info-package .content-box .value-beyond > ul > li:nth-child(3):after{
   background-color: #364e6a;
     bottom: -6px;
 }
-#booking .content-box .value-beyond > ul > li:nth-child(3):before{
+#booking .content-box .value-beyond > ul > li:nth-child(3):before,
+#info-package .content-box .value-beyond > ul > li:nth-child(3):before{
     bottom: -14px;
 }
-#booking .content-box .value-beyond > ul > li:last-child:before, #booking .content-box .value-beyond > ul > li:last-child:after{
+#booking .content-box .value-beyond > ul > li:last-child:before, #booking .content-box .value-beyond > ul > li:last-child:after,
+#info-package .content-box .value-beyond > ul > li:last-child:before, #info-package .content-box .value-beyond > ul > li:last-child:after{
 	display: none;
 }
 #booking #randall-form .content-box{
@@ -4644,6 +4649,7 @@ height: 156px;
 }
 #value-event .content-box .value-beyond > ul > li:last-child:before, 
 #booking .content-box .value-beyond > ul > li:last-child:after,
+#info-package .content-box .value-beyond > ul > li:last-child:after,
 .deliver-option, #value-event{
 	display: none;
 }
@@ -5235,7 +5241,9 @@ float: left;
 margin-right: 15px;
 display: none;
 }
-
+ul.whitepaper-list li .thumb-holder img{
+	width:100%;
+}
 ul.whitepaper-list li .whitepaper-detail{
 float: none;
 width:100%;
@@ -5632,6 +5640,251 @@ font-weight: 700;
 	padding: 13px 2.2px 0;
 	vertical-align: middle
 }
+.content-box .download-list{
+margin: 40px 0px 0px;
+width:100%;
+max-width: 900px;
+}
+
+.content-box .download-list li{
+	font-size:inherit;
+	list-style: none;
+	margin-right: 3%;
+	display: inline-block;
+	vertical-align: top;
+	margin-bottom: 40px;
+	text-align: center;
+	width:100%;
+}
+.downloadables .content-box p.section-blurb{
+	font-size: 1em;
+}
+
+.download-list li h5, .content-box .download-list li p{
+font-size: 1em;
+margin-bottom: 5px;
+color: #364e6a;
+line-height: 1.2;
+text-align: left
+}
+
+.content-box .download-list li p{
+	padding-right: 15px;
+}
+.image-thumb{
+	margin-bottom: 23px;
+}
+.image-details{
+	width:100%;
+}
+.downloadables #randall-form{
+	margin-bottom: 0px;
+	margin-top: 60px;
+}
+	 #info-package .content-box .entry-content h2,  #event-resource .content-box .entry-content h2{
+		   font-size: 1.25em;
+  font-weight: 700;
+  line-height: 1.24;
+  letter-spacing: normal;
+  color: #50b144;
+	 }
+#info-package .download-bt, #event-resource .download-bt{
+	 font-size:1em;
+	width:100%;
+	margin-bottom: 0;
+	 }
+#event-resource .download-bt{
+	float: right;
+	margin-top: 0
+}
+.event-box{
+width: 100%;
+background-color: #ffffff;
+box-shadow: none;
+display: inline-block;
+padding: 25px 0px;
+margin-bottom: 0;
+clear: both;
+border-top: 2px solid #979797;
+	
+}
+#event-resource .entry-content {
+font-size: initial;
+padding-bottom: 30px;
+width: 100%;
+display: inline-block;
+vertical-align: top;
+}
+.event-sidebar{
+width: 118%;
+display: inline-block;
+position: relative;
+float: left;
+background-color: #364e6a;
+padding: 0 9%;
+margin-left: -9%;
+}
+.event-sidebar-box{
+	  width: 100%;
+  background-color: #364e6a;
+  box-shadow:none;
+	display: inline-block;
+		padding: 30px 0px 35px;
+	margin-bottom: 0px;
+	border-bottom: 2px solid #979797;
+}
+.event-sidebar-box:last-of-type{
+	border-bottom: none;
+}
+#event-resource .content-box .event-sidebar-box h2{
+		   font-size: 1.25em;
+  font-weight: 700;
+  line-height: 1.24;
+  letter-spacing: normal;
+  color: #fff;
+	 }
+#event-resource .content-box .event-sidebar-box p, #event-resource .content-box .event-sidebar-box li a{
+	color: #fff;
+}
+
+#event-resource .content-box .event-sidebar-box li{
+list-style: none;
+color: #fff;
+line-height: 1.43;
+margin-bottom: 5px;
+font-size: 0.9375em;
+font-weight: 700;
+}
+
+.randalls-promise{
+	background-image: url(images/banner/randall_craig_twc.jpg);
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: top right -207px;
+	height: 264px;
+	display: table;
+	width: 100%;
+}
+.promise-content{
+display: table-cell;
+vertical-align: middle;
+width: 80%;
+text-align: left;
+padding: 0 6% 0 24px;
+}
+.promise-content h3{
+	  font-size: 1.0625em;
+  font-weight: 700;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #50b144;
+}
+.promise-content .promise-text{
+	  font-size: 1.4375em;
+  font-weight: 700;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: 1.4;
+  letter-spacing: normal;
+  color: #ffffff;
+	width:100%;
+}
+.promise-content .promise-text span{
+	display: block;
+	color: #9bd2e0;
+	font-size:  .745em;
+
+}
+#generic .content-box h1{
+ color: #50b144;
+	border-left:none;
+	padding-left: 0;
+}
+#generic .content-box ul{
+	display: inline-block;
+	
+}
+#generic .content-box ul li{
+		
+  font-size:0.9375em;
+  font-weight: 400;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #364e6a;
+	list-style: none;
+	margin-bottom: 10px;
+}
+#generic .content-box .more-info ul li {
+		list-style: none;
+margin-left: 0px;
+}
+#generic .content-box ul li a{
+	font-weight: 700;
+	color:  #50b144;
+}
+#generic .content-box .more-info ul{
+	font-size: inherit;
+}
+#generic .content-box .more-info h3{
+	font-size:1.0625em; 
+}
+#generic .content-box .more-info{
+	margin: 25px 0;
+	padding-top: 25px;
+border-top: 2px solid #7cabb7;
+}
+.randall-quotes{
+	height: 238px;
+	width:100%;
+	display: table;
+	background-image: url(images/banner/thankyou_page_quote.jpg);
+	background-repeat: no-repeat;
+	background-size: cover;
+	display: none;
+}
+.randall-quotes .quotes-content{
+	display: table-cell;
+	vertical-align: middle;
+	padding: 0 5%;
+	  font-size:1.875em;
+  font-weight: 700;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  text-align: right;
+  color: #ffffff;
+}
+.randall-quotes .quotes-content span{
+font-size:.679em;
+  font-weight: normal;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  text-align: right;
+  color: #ffffff;	
+	
+}
+.randall-quotes .quotes-content .quote-text{
+	width: 690px;
+margin: 0 auto;
+text-align: right;
+}
+
+#generic .entry-content p{
+  font-size: 1.0625em;
+  font-weight: 400;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #2d2d2d;
+} 
 /* -
 ///
 ////////
@@ -5691,7 +5944,7 @@ section, .section-wrap, #next-step .content-box, #stage .content-box, #choose-sp
 	 picture{
 		 width:100%;
 	 }
-.about-randall .banner-wrap img, .speaking .banner-wrap img, .thought-leadership .banner-wrap img, .media .banner-content img{
+.about-randall .banner-wrap img, .speaking .banner-wrap img, .thought-leadership .banner-wrap img, .media .banner-content img, .meeting .banner-wrap img{
 	width: auto;
 	margin-left: 0;
 	margin-right: 0;
@@ -5731,7 +5984,7 @@ section, .section-wrap, #next-step .content-box, #stage .content-box, #choose-sp
    padding: 322px 4% 0 130px;
 	
 }		
-.thought-leadership .banner-content	{
+.thought-leadership .banner-content, .meeting .banner-content 	{
 top: -186px;
 border-radius: 375px;
 height: 411px;
@@ -5740,7 +5993,7 @@ padding: 290px 4% 0 104px;
 top: -204px;
 width: 415px;
 	 }
-.speaking .banner-content h1, .thought-leadership .banner-content h1, .media .banner-content h1{
+.speaking .banner-content h1, .thought-leadership .banner-content h1, .media .banner-content h1, .meeting .banner-content h1{
 	font-size: 1.875em;
 	line-height: normal
 }
@@ -8062,7 +8315,12 @@ display: inline-block;
 .download-bt{
 		 margin-bottom: 0;
 		 margin-left: 85px;
-	 }	
+	 }
+#info-package .download-bt, #event-resource .download-bt{
+		 margin-left: 0px;
+	 font-size:0.9375em;
+	width:auto;
+	 }	 
 #room-setup .content-box ul li .mr-content, #weekly-tipsheset .content-box ul li .mr-content{
 		 float: left;
 		 width: 80%;
@@ -8219,7 +8477,8 @@ background-color: #ffffff;
   color: #ffffff;
 	margin-bottom: 0;
 }
-#booking .content-box .value-beyond ul li{
+#booking .content-box .value-beyond ul li,
+#info-package .content-box .value-beyond ul li{
 	list-style: none;
 	margin-bottom: 7px;
 	color: #fff;
@@ -8229,12 +8488,17 @@ background-color: #ffffff;
 	vertical-align: top;
 	
 }
-#booking .content-box .value-beyond > ul > li{
+#booking .content-box .value-beyond > ul > li,
+#info-package .content-box .value-beyond > ul > li {
 		width: 32.6%;
 	height: 310px;
 	margin-right: 4px;
 }
-#booking .content-box .value-beyond ul li > ul li{
+#info-package .content-box .value-beyond > ul > li {
+		width: 32.15%;
+	 }
+#booking .content-box .value-beyond ul li > ul li,
+#info-package .content-box .value-beyond ul li > ul li {
    background-image: url("images/icons/white-bullet.png");
     background-position: 3px 6px;
     background-repeat: no-repeat;
@@ -8250,8 +8514,14 @@ background-color: #ffffff;
 #booking .content-box .download-bt{
 	margin-left:51px; 
 	margin-bottom: auto;
+}	
+#info-package .value-beyond {
+    position: inherit;
+    width: inherit;
+    margin: 60px 0 0px;
 }	 
-#booking .content-box .value-beyond > ul > li:first-child h2{
+#booking .content-box .value-beyond > ul > li:first-child h2,
+#info-package .content-box .value-beyond > ul > li:first-child h2{
 	text-align: center;
 	color: #4a4a4a;
 	margin-left: 0;
@@ -8259,30 +8529,36 @@ background-color: #ffffff;
 	margin-bottom: 0;
 	
 }
-#booking .content-box .value-beyond > ul > li h2{
+#booking .content-box .value-beyond > ul > li h2,
+#info-package .content-box .value-beyond > ul > li h2{
 	text-align: left;
 	margin-left: 25px;
 }
-#booking .content-box .value-beyond > ul > li:first-child{
+#booking .content-box .value-beyond > ul > li:first-child,
+#info-package .content-box .value-beyond > ul > li:first-child{
   border: 2px solid #4a4a4a;
     padding: 7px 17px;
     width: 340px;
 	height:auto
 }
-#booking .content-box .value-beyond > ul > li:nth-child(2){
+#booking .content-box .value-beyond > ul > li:nth-child(2),
+#info-package .content-box .value-beyond > ul > li:nth-child(2){
 background-color: #4fb144;
 display: inline-block;	
 }
-#booking .content-box .value-beyond > ul > li:nth-child(3){
+#booking .content-box .value-beyond > ul > li:nth-child(3),
+#info-package .content-box .value-beyond > ul > li:nth-child(3){
 background-color: #364e6a;
 display: inline-block;
 }
-#booking .content-box .value-beyond > ul > li:nth-child(4){
+#booking .content-box .value-beyond > ul > li:nth-child(4),
+#info-package .content-box .value-beyond > ul > li:nth-child(4){
 display: inline-block;
 	background-color: #7cabb7;
 	margin-right: 0;
 }
-#booking .content-box .value-beyond > ul > li:first-child:after{
+#booking .content-box .value-beyond > ul > li:first-child:after,
+#info-package .content-box .value-beyond > ul > li:first-child:after{
    background-color: #fff;
     border-bottom: 2px solid #364e6a;
     border-right: 2px solid #364e6a;
@@ -8296,7 +8572,8 @@ display: inline-block;
     width: 13px;
     z-index: 2;
 }
-#booking .content-box .value-beyond > ul > li:first-child:before{
+#booking .content-box .value-beyond > ul > li:first-child:before,
+#info-package .content-box .value-beyond > ul > li:first-child:before{
    background: #fff none repeat scroll 0 0;
     bottom: -15px;
     content: "";
@@ -8308,7 +8585,8 @@ display: inline-block;
     width: 18px;
     z-index: 1;
 }
-#booking .content-box .value-beyond > ul > li:after{
+#booking .content-box .value-beyond > ul > li:after,
+#info-package .content-box .value-beyond > ul > li:after{
    bottom: 47.9%;
     content: "";
     height: 13px;
@@ -8321,7 +8599,8 @@ display: inline-block;
 	left: auto
 }
 
-#booking .content-box .value-beyond > ul > li:before{
+#booking .content-box .value-beyond > ul > li:before,
+#info-package .content-box .value-beyond > ul > li:before{
  background: #fff none repeat scroll 0 0;
     bottom: 47%;
     content: "";
@@ -8334,18 +8613,22 @@ display: inline-block;
     z-index: 1;
 	left: auto;
 }
-#booking .content-box .value-beyond > ul > li:nth-child(2):after{
+#booking .content-box .value-beyond > ul > li:nth-child(2):after,
+#info-package .content-box .value-beyond > ul > li:nth-child(2):after{
   background-color: #4fb144;
   bottom: 47.9%;
 }
-#booking .content-box .value-beyond > ul > li:nth-child(3):after{
+#booking .content-box .value-beyond > ul > li:nth-child(3):after,
+#info-package .content-box .value-beyond > ul > li:nth-child(3):after{
   background-color: #364e6a;
   bottom: 47.9%;
 }
-#booking .content-box .value-beyond > ul > li:nth-child(3):before{
+#booking .content-box .value-beyond > ul > li:nth-child(3):before,
+#info-package .content-box .value-beyond > ul > li:nth-child(3):before{
   bottom: 46.9%;
 }
-#booking .content-box .value-beyond > ul > li:last-child:before, #booking .content-box .value-beyond > ul > li:last-child:after{
+#booking .content-box .value-beyond > ul > li:last-child:before, #booking .content-box .value-beyond > ul > li:last-child:after,
+#info-package .content-box .value-beyond > ul > li:last-child:before, #info-package .content-box .value-beyond > ul > li:last-child:after{
 	display: none;
 }
 #booking #randall-form .content-box{
@@ -9010,6 +9293,113 @@ background-image: url(images/icons/green-go-button.png);   background-position: 
 	-ms-column-count: 2;
 	-ms-column-gap: 2em;
 
+}	
+.content-box .download-list{
+margin: 40px 0px 0px;
+width:100%;
+max-width: 900px;
+}
+
+.content-box .download-list li{
+	font-size:inherit;
+	list-style: none;
+	margin-right: 3%;
+	display: inline-block;
+	vertical-align: top;
+	margin-bottom: 116px;
+	width: 219px;
+	text-align: left;
+}
+
+
+.download-list li h5, .content-box .download-list li p{
+font-size: .75em;
+margin-bottom: 5px;
+color: #364e6a;
+line-height: 1.2;
+}	 
+.downloadables #randall-form{
+	margin-bottom: 67px;
+	margin-top: -100px;
+}
+.image-details{
+	width:150px;
+}
+	 #info-package .content-box .entry-content h2, #event-resource .content-box .entry-content h2{
+		   font-size: 1.0625em;
+	 }
+	 #info-package .download-bt br{
+		 display: none;
+		 
+	 }
+.event-box{
+	  width:100%;
+ background-color: #ffffff;
+  box-shadow: 0 1px 6px 0 rgba(0, 0, 0, 0.5);
+	display: inline-block;
+	padding: 25px 15px;
+	margin-bottom: 50px;
+	clear:both;
+	border-top:none;
+	
+}	 
+#event-resource .entry-content {
+width: 46%;
+
+}
+.event-sidebar{
+width: 48%;
+display: inline-block;
+position: relative;
+float: right;
+background: none;
+margin-left: auto;
+padding: inherit;
+}	 
+.event-sidebar-box{
+	  width: 100%;
+  background-color: #364e6a;
+  box-shadow: 0 0 6px 0 rgba(0, 0, 0, 0.5);
+	display: inline-block;
+		padding: 30px 35px 35px;
+	margin-bottom: 50px;
+	border-bottom: none;
+}
+	 .randalls-promise{
+	background-image: url(images/banner/randall_craig_twc.jpg);
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: top right;
+	height: 250px;
+	display: table;
+	width: 100%;
+}
+	 .promise-content {
+		 padding: 0 6%;
+	 }
+.promise-content .promise-text{
+	  font-size: 1.5625em;
+  font-weight: 700;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: 1.4;
+  letter-spacing: normal;
+  color: #ffffff;
+	width: 57%;
+}
+	 .promise-content .promise-text br{
+		 display: none;
+	 }
+.promise-content .promise-text span{
+	font-size: initial;
+}	
+	 .randall-quotes{
+		 display: table;
+	 }
+#generic .content-box .more-info{
+	margin: 65px 0;
+	border-top: 0px solid;
+	padding: inherit;
 }	 
 }
  /* -
@@ -9049,8 +9439,8 @@ html .nav {
 	float: none;
 	margin-top: 0;
 }	 
-.banner-wrap img, .about-randall .banner-wrap img, .speaking .banner-wrap img, .thought-leadership .banner-wrap img, .media .banner-content img { margin-left: 0; margin-right: 0}
-.banner-wrap img, .banner-wrap-inside img, .about-randall .banner-wrap img, .speaking .banner-wrap img, .thought-leadership .banner-wrap img, .media .banner-content img {
+.banner-wrap img, .about-randall .banner-wrap img, .speaking .banner-wrap img, .thought-leadership .banner-wrap img, .media .banner-content img, .meeting .banner-wrap img { margin-left: 0; margin-right: 0}
+.banner-wrap img, .banner-wrap-inside img, .about-randall .banner-wrap img, .speaking .banner-wrap img, .thought-leadership .banner-wrap img, .media .banner-content img, .meeting .banner-wrap img {
 	width:100%;
 	
 }		 
@@ -9087,7 +9477,7 @@ section, .section-wrap, #choose-speaker .content-box, #about-randall .content-bo
     padding:322px 4% 0 150px;
 	
 }	
-.thought-leadership .banner-content{
+.thought-leadership .banner-content, .meeting .banner-content{
      padding: 285px 4% 0 125px;
 	
 }	 
@@ -9119,6 +9509,7 @@ padding: 48px 10px;
 
 	 #choose-speaker .content-box p.section-blurb{ width: 100%; margin-top: 0; margin-left: 0; height: auto}	 
 .content-box p.section-blurb{ width: 90%; font-size: 0.9375em; font-weight: 700; padding: 0 0 0 18px}
+#generic .content-box p.section-blurb{ width: 90%; font-size: 0.9375em; font-weight: 400; padding: 0 0 0 0px}
 #tl-books .content-box p.section-blurb{
 padding: 0 0 0 0px;
 font-weight: 700;
@@ -9687,6 +10078,19 @@ max-width: 251px;
 		 width: 205px;
 	margin-top: 57px
 	 }
+	 #info-package .value-beyond	{
+		 position: inherit;
+		 width:inherit;
+		 margin: 60px 0 30px;
+	 }
+	#info-package .content-box .value-beyond > ul > li:first-child{
+		 height: auto;
+	 }
+	#info-package .content-box .value-beyond > ul > li{
+		 height: 270px;
+		width: 32.8%;
+	 }	
+ 
 	 .ideatrust-sidebar{
 		 width:235px;
 		 margin-top: 37px;
@@ -10321,6 +10725,13 @@ margin-bottom: 67px;
 	 .news-partners{
 		 margin-top: 30px;
 	 }	 
+.content-box .download-list li{
+	width:auto;
+}	
+#generic .entry-content{
+	width: 60%;
+
+}	 
 }
 
 
